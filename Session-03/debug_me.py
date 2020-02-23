@@ -1,5 +1,5 @@
 
-#---Find the error!
+#---Find the error!--zero division
 
 def g(a, b):
     return a - b
