@@ -1,2 +1,4 @@
 def openfile(file):
-    with open("dna.txt")
+    with open("dna.txt", "r"):
+
+
