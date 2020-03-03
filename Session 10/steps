@@ -1,0 +1,8 @@
+1. Create a socket
+2. Bind the socket (IP, Pnt)
+3. Configure --> listening socket
+4. Want for client to connect
+5.--> client-socket is available
+6. When a client connects, the socket library creates a new socket for communicating with the client
+7. Read the client messages. What does the client want? (metho rcv)
+8. Process the request and send a response message (method send)
