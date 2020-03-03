@@ -1,7 +1,6 @@
 import socket
 import termcolor
 
-
 # Configure the Server's IP and PORT
 PORT = 8080
 IP = "192.168.124.179"
