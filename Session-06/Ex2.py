@@ -13,10 +13,10 @@ class Seq:
             self.strbases = strbases
     def __str__(self):
         return self.strbases
+    def len(self):
+       return len(self.strbases)
 
+seq_list = [Seq("ACT"), Seq("GATA"), Seq("CAGATA")]
 
-s1 = Seq("ACCTGC")
-s2 = Seq("Hello? Am I a valid sequence?")
-
-print(f"Sequence 1 : {s1}")
-print(f"Sequence 2: {s2}")
+for seq in seq_list:
+    print(f"Sequence {seq_list.index(seq)}:(Length:{seq.len()}){seq}")
