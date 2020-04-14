@@ -13,10 +13,10 @@ class Seq:
             self.strbases = strbases
     def __str__(self):
         return self.strbases
-    def len(self):
+    def length(self):
        return len(self.strbases)
 
 seq_list = [Seq("ACT"), Seq("GATA"), Seq("CAGATA")]
 
 for seq in seq_list:
-    print(f"Sequence {seq_list.index(seq)}:(Length:{seq.len()}){seq}")
+    print(f"Sequence {seq_list.index(seq)}:(Length:{seq.length()}){seq}")
