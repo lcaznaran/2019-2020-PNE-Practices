@@ -1,4 +1,5 @@
 from pathlib import Path
+
 class Seq:
     """A class for representing sequence objects"""
     NULL = "NULL"
@@ -53,4 +54,8 @@ class Seq:
                 comp += basec[b] #b is the key
             return comp
 
-    def read_fasta(self):
+    def read_fasta(self, f):
+        file_contents = Path(f).read_text()
+        lines = file_contents.split("\n")[1:]
+        body = "".join(lines)
+        return body
