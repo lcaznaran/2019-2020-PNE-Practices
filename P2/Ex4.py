@@ -10,6 +10,8 @@ PORT = 8080
 
 c = Client(IP, PORT)
 print(c)
-print("Sending a message to the server...")
-response = c.talk("Testing!!!")
-print(f"Response: {response}")
+c.debug_talk("Message 1---")
+c.debug_talk("Message 2: Testing !!!")
+
+
+#YOU NEED TO CREATE A SERVER TO MAKE THIS WORK! SERVER1
