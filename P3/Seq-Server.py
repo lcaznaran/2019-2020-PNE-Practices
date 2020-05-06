@@ -2,9 +2,10 @@ import socket
 import termcolor
 from Seq1 import Seq
 
-seq = ["ACTGAACTTGACCTACGGTCA","TTCGACCGGAAGTCCAATTTG","CCTAGGAACTTTGACGTAACT","ACGTCAGCTAGTGCTAACGTA"]
+seq = ["ACTGAACTTGACCTACGGTCA","TTCGACCGGAAGTCCAATTTG","CCTAGGAACTTTGACGTAACT","ACGTCAGCTAGTGCTAACGTA","ATTGCTAAGGTTCTGAGTACT"]
 # -- Step 1: create the socket
 ls = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
 
 # -- Optional: This is for avoiding the problem of Port already in use
 ls.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -52,6 +53,11 @@ def rev_func(s):
     rev = s.seq_reverse()
     return rev
 
+def gene_func(GENE):
+    FOLDER = "../Session-04/"
+    txt = ".txt"
+    s = Seq().read_fasta(FOLDER + GENE + txt)
+    return s
 
 print("SEQ server configured!")
 
@@ -59,7 +65,6 @@ listn=["1","2","3","4"]
 while True:
     # -- Waits for a client to connect
     print("Waiting for clients to connect")
-
     try:
         (cs, client_ip_port) = ls.accept()
 
@@ -107,6 +112,9 @@ while True:
         elif comm == "REV":
             termcolor.cprint("REV command", 'green')
             response = rev_func(arg) + "\n"
+        elif comm == "GENE":
+            termcolor.cprint("GENE command", 'green')
+            response = gene_func(arg) + "\n"
 
         print(response)
         cs.send(response.encode())

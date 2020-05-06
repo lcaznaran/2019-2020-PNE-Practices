@@ -10,7 +10,7 @@ IP = "127.0.0.1"
 PORT = 8080
 
 FOLDER = "../Session-04/"
-EXT = ".txt"
+txt = ".txt"
 GENE = "U5"
 
 c = Client(IP, PORT)
@@ -18,7 +18,7 @@ c = Client(IP, PORT)
 print(c)
 
 
-s = Seq().read_fasta(FOLDER + GENE + EXT)
+s = Seq().read_fasta(FOLDER + GENE + txt)
 
 c.debug_talk(f"Sending {GENE} Gene to the server...")
 c.debug_talk(str(s))
