@@ -1,11 +1,10 @@
 import socket
 import termcolor
-
+from pathlib import Path
 
 # -- Server network parameters
 IP = "127.0.0.1"
 PORT = 8080
-
 
 def process_client(s):
     # -- Receive the request message
@@ -31,20 +30,21 @@ def process_client(s):
     # Body (content to send)
 
     # This new contents are written in HTML language
-    body = """
-    <!DOCTYPE html>
-    <html lang="en" dir="ltr">
-      <head>
-        <meta charset="utf-8">
-        <title>Blue server</title>
-      </head>
-      <body style="background-color: lightblue;">
-        <h1>BLUE SERVER</h1>
-        <p>I am the blue Server! :-)</p>
-        <p>hola<p>
-      </body>
-    </html>
-    """
+    body = Path("index.html").read_text()
+
+    # -- Status line: We respond that everything is ok (200 code)
+    status_line = "HTTP/1.1 200 OK\n"
+
+    # -- Add the Content-Type header
+    header = "Content-Type: text/html\n"
+
+    # -- Add the Content-Length
+    header += f"Content-Length: {len(body)}\n"
+
+    # -- Build the message by joining together all the parts
+    response_msg = status_line + header + "\r\n" + body
+    cs.send(response_msg.encode())
+
     # -- Status line: We respond that everything is ok (200 code)
     status_line = "HTTP/1.1 200 OK\n"
 

@@ -1,12 +1,16 @@
 import socket
 import termcolor
-
+from pathlib import Path
 
 # -- Server network parameters
 IP = "127.0.0.1"
 PORT = 8080
-
-
+def resource_fun(path):
+    if path == "/info/C":
+        resp = Path("C.html").read_text()
+    else:
+        resp = Path("blank.html").read_text()
+    return resp
 def process_client(s):
     # -- Receive the request message
     req_raw = s.recv(2000)
@@ -22,7 +26,12 @@ def process_client(s):
 
     print("Request line: ", end="")
     termcolor.cprint(req_line, "blue")
-
+    words = req_line.split(" ")
+    method = words[0]
+    path = words[1]
+    body = ""
+    if method == "GET":
+        body = resource_fun(path)
     # -- Generate the response message
     # It has the following lines
     # Status line
@@ -31,20 +40,20 @@ def process_client(s):
     # Body (content to send)
 
     # This new contents are written in HTML language
-    body = """
-    <!DOCTYPE html>
-    <html lang="en" dir="ltr">
-      <head>
-        <meta charset="utf-8">
-        <title>Blue server</title>
-      </head>
-      <body style="background-color: lightblue;">
-        <h1>BLUE SERVER</h1>
-        <p>I am the blue Server! :-)</p>
-        <p>hola<p>
-      </body>
-    </html>
-    """
+
+    # -- Status line: We respond that everything is ok (200 code)
+    status_line = "HTTP/1.1 200 OK\n"
+
+    # -- Add the Content-Type header
+    header = "Content-Type: text/html\n"
+
+    # -- Add the Content-Length
+    header += f"Content-Length: {len(body)}\n"
+
+    # -- Build the message by joining together all the parts
+    response_msg = status_line + header + "\r\n" + body
+    cs.send(response_msg.encode())
+
     # -- Status line: We respond that everything is ok (200 code)
     status_line = "HTTP/1.1 200 OK\n"
 
@@ -89,4 +98,3 @@ while True:
         process_client(cs)
         # -- Close the socket
         cs.close()
-
