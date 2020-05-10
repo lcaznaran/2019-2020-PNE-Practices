@@ -35,20 +35,26 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         # -- Content type header
         # -- Both, the error and the main page are in HTML
         content_type = 'text/html'
-
         if path == "":
             path = "index.html"
 
         # -- Depending on the resource requested
+        elif path == "/info/A.html":
+            path = "info/A.html"
+        elif path == "/info/C.html":
+            path= "info/C.html"
+        elif path == "/info/G.html":
+            path= "info/G.html"
+        elif path == "/info/T.html":
+            path= "info/T.html"
         try:
             contents = Path(path).read_text()
             status = 200
         except FileNotFoundError:
-            contents = Path("error.html").read_text()
+            contents = Path("Error.html").read_text()
 
             # Status code is NOT FOUND
             status = 404
-
         # Generating the response message
         self.send_response(status)
 
@@ -73,7 +79,6 @@ Handler = TestHandler
 
 # -- Open the socket server
 with socketserver.TCPServer(("", PORT), Handler) as httpd:
-
     print("Serving at PORT", PORT)
 
     # -- Main loop: Attend the client. Whenever there is a new
