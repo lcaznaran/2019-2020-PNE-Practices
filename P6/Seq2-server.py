@@ -45,7 +45,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         if verb == "/":
             # Open the form1.html file
             # Read the index from the file
-            contents = Path('form-3.html').read_text()
+            contents = Path('form-4.html').read_text()
             error_code = 200
         elif verb == "/ping":
             contents ="""
@@ -110,6 +110,51 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
             <body style="background-color: magenta;">
             <h2>Gene: {gene}</h2>
             <textarea readdonly rows = "20" cols = "60"> {gene_info}</textarea>
+            <br>
+            <a href="/">Main page</a>
+            </body>
+            </html>
+            """
+            error_code = 200
+        elif verb == "/operate":
+            # -- Get the argument to the right of the ? symbol
+            pair = arguments[1]
+            # -- Get all the pairs name = value
+            pairs = pair.split('&')
+            # -- Get the two elements: name and value
+            name, sequence = pairs[0].split("=")
+            name, operation = pairs[1].split("=")
+            s = Seq(sequence)
+            if operation == "info":
+                l = s.length()
+                ac = s.count_base("A")
+                tc = s.count_base("T")
+                cc = s.count_base("C")
+                gc = s.count_base("G")
+                resp = f"""
+                    <p>Total length: {l}</p>
+                    <p>A: {ac} ({round((ac / l) * 100)})%</p>  
+                    <p>C: {cc} ({round((cc / l) * 100)})%</p>    
+                    <p>T: {tc} ({round((tc / l) * 100)})%</p>     
+                    <p>G: {gc} ({round((gc / l) * 100)})%</p>"""
+            elif operation == "rev":
+                resp = s.seq_reverse()
+            else:
+                resp = s.seq_complement()
+            contents = f"""
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="utf-8">
+                <title>OPERATION</title>
+            </head>
+            <body style="background-color: lightgreen;">
+            <h2>Sequence:</h2>
+            <p> {sequence} </p>
+            <h2> Operation: </h2>
+            <p> {operation}</p>
+            <h2> Result: </h2>
+            <p> {resp} </p>
             <br>
             <a href="/">Main page</a>
             </body>
