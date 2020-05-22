@@ -65,7 +65,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                        </body>
                                        </html>"""
                     for i in info:
-                        lim_list.append(i["display_name"])
+                        lim_list.append(i["common_name"])
                         if limit == len(lim_list):
                             for e in lim_list:
                                 contents += f"""<il>
@@ -76,70 +76,49 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                 </html>"""
                     status = 200
         elif verb == "/karyotype":
-            endpoint = "/info/species"  # specific endpoint for this function
-            conn = http.client.HTTPConnection(server)
+            contents = f"""
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>KARYOTYPE OF A SPECIE</title>
+                <p>The names of the chromosomes are:</p>
+            </head>
+            <body style="background-color: lightgreen;">"""
             pair = arguments[1]
-            name,value = pair.split("=")
-            limit = int(value)
+            specie = pair.split("?")
+            s, name = specie[0].split("=")
+            endpoint1 = "info/assembly/"  # specific endpoint for this function
+            conn = http.client.HTTPConnection(server)
             try:
-                conn.request("GET", endpoint + params)
+                conn.request("GET", endpoint1 +name + params) #to check if the input is in ensembl
             except ConnectionRefusedError:
                 print("ERROR! Cannot connect to the Server")
                 exit()
             resp = conn.getresponse()
-            data = resp.read().decode()
+            data = resp.read().decode("utf-8")
             data = json.loads(data)
-            info = data['species']
-            lim_list = []
-            contents = f"""<!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <title>LIST OF SPECIES</title>
-                <p>The total number of species is:{len(info)}</p>
-            </head>
-            <body style="background-color: lightblue;">"""
-            if value == "":
-                for i in info:
-                    contents += f"""
-                    <ol>
-                    <li>-{i["common_name"]}</li>
-                    </ol>"""
-                contents += """<a href="/">Main page</a>
-                        </body>
-                        </html>"""
-                status = 200
-            else:
-                if len(info) >= limit:
-                    contents += f"""<p>The limit that you have selected is: {limit}</p>
-                                    <p>The species are:</p>
-                                       </body>
-                                       </html>"""
-                    for i in info:
-                        lim_list.append(i["display_name"])
-                        if limit == len(lim_list):
-                            for e in lim_list:
-                                contents += f"""<il>
-                                <ol>-{e}</ol>
+            info = data['karyotype']
+            for i in info:
+                contents += f"""<il>
+                                <ol>-{i}</ol>
                                 </il>"""
-                    contents += """<a href="/">Main page</a>
+            contents += f"""<a href="/">Main page</a>
                                 </body>
                                 </html>"""
-                    status = 200
+
+            status =200
+
         self.send_response(status)
         self.send_header('Content-Type', 'text/html')
         self.send_header('Content-Length', len(str.encode(contents)))
 
         self.end_headers()
 
-        # Send the response message
+
         self.wfile.write(str.encode(contents))
         return
 
-# ------------------------
-# - Server MAIN program
-# ------------------------
-# -- Set the new handler
 Handler = TestHandler
 
 # -- Open the socket server
