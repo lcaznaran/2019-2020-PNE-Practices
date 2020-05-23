@@ -11,6 +11,7 @@ PORT = 8080
 server = "rest.ensembl.org"
 params = "?content-type=application/json"
 
+
 socketserver.TCPServer.allow_reuse_address = True
 
 class TestHandler(http.server.BaseHTTPRequestHandler):
@@ -186,32 +187,54 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                     </body>
                                     </html>"""
                 status = 404
-            elif verb == "/geneList":
-                contents = f"""
-                <!DOCTYPE html>
-                <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <title>GENE LIST</title>
-                </head>
-                <body style="background-color: rgb(64,224,208);">"""
-                pair = arguments[1]
-                division = pair.split("&")
-                values = ""
-                endpoint = "/overlap/region/human/"
-                for e in division:
-                    e = e.split("=")
-                    values += e[-1]
-
-                conn = http.client.HTTPConnection(server)
+            elif verb == "/geneSeq":
                 try:
-                    conn.request("GET", endpoint + params)
-                except ConnectionRefusedError:
-                    print("ERROR! Cannot connect to the Server")
-                    exit()
-                resp = conn.getresponse()
-                data = resp.read().decode("utf-8")
-                data = json.loads(data)
+                    contents = f"""
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>GENE LIST</title>
+                    </head>
+                    <body style="background-color: rgb(64,224,208);">"""
+                    pair = arguments[1]
+                    division = pair.split("=")
+                    specie_n = division[1]
+                    values = ""
+                    endpoint = f"/xrefs/symbol/homo_sapiens/{specie_n}" #id gene human
+                    conn = http.client.HTTPConnection(server)
+                    try:
+                        conn.request("GET", endpoint + params)
+                    except ConnectionRefusedError:
+                        print("ERROR! Cannot connect to the Server")
+                        exit()
+                    resp = conn.getresponse()
+                    data = resp.read().decode("utf-8")
+                    data = json.loads(data)
+                    ID = data[0]
+                    gene = ID["id"] #obtain gene in ensembl: we can find this data on wikipedia
+                    #we need another endpoint, we have the id to use sequence/id/---
+                    endpoint1 = f"sequence/id/{gene}"
+                    conn1 = http.client.HTTPConnection(server)
+                    try:
+                        conn1.request("GET", endpoint1 + params)
+                    except ConnectionRefusedError:
+                        print("ERROR! Cannot connect to the Server")
+                        exit()
+                    resp1 = conn1.getresponse()
+                    data1 = resp1.read().decode("utf-8")
+                    data1 = json.loads(data1)
+                    sequence = data1["seq"]
+                    contents += f"""<p> The sequence of this human  gene ({gene}) is: {sequence}</p>"""
+                    status = 200
+                except:
+                    contents = Path("Error.html").read_text()
+                    contents += f"""<a href="/">Main page</a>
+                                        </body>
+                                        </html>"""
+                    status = 404
+
+
             self.send_response(status)
             self.send_header('Content-Type', 'text/html')
             self.send_header('Content-Length', len(str.encode(contents)))
