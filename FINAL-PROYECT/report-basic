@@ -1,0 +1,31 @@
+Test report
+--------------
+----> listSpecies endpoint
+*TEST 1
+*Input:
+http://localhost:8080/listSpecies?limit=5
+*output:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LIST OF SPECIES</title>
+    <p>The total number of species is:286</p>
+</head>
+<body style="background-color: rgb(64,224,208);"><p>The limit that you have selected is: 5</p>
+                        <p>The species are:</p>
+                           </body>
+                           </html><il>
+                    <ol>-mainland tiger snake</ol>
+                    </il><il>
+                    <ol>-birds</ol>
+                    </il><il>
+                    <ol>-red fox</ol>
+                    </il><il>
+                    <ol>-sperm whale</ol>
+                    </il><il>
+                    <ol>-Great spotted kiwi</ol>
+                    </il><a href="/">Main page</a>
+                    </body>
+                    </html>
