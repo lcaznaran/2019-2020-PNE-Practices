@@ -4,6 +4,7 @@ import termcolor
 from pathlib import Path
 import json
 from socket import gethostbyname, gaierror
+from Seq1 import Seq
 
 PORT = 8080
 #ensembl info
@@ -179,14 +180,38 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                                     </body>
                                                     </html>"""
                     status = 200
-            else:
+
                 contents = Path("Error.html").read_text()
                 contents += f"""<a href="/">Main page</a>
                                     </body>
                                     </html>"""
                 status = 404
+            elif verb == "/geneList":
+                contents = f"""
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>GENE LIST</title>
+                </head>
+                <body style="background-color: rgb(64,224,208);">"""
+                pair = arguments[1]
+                division = pair.split("&")
+                values = ""
+                endpoint = "/overlap/region/human/"
+                for e in division:
+                    e = e.split("=")
+                    values += e[-1]
 
-
+                conn = http.client.HTTPConnection(server)
+                try:
+                    conn.request("GET", endpoint + params)
+                except ConnectionRefusedError:
+                    print("ERROR! Cannot connect to the Server")
+                    exit()
+                resp = conn.getresponse()
+                data = resp.read().decode("utf-8")
+                data = json.loads(data)
             self.send_response(status)
             self.send_header('Content-Type', 'text/html')
             self.send_header('Content-Length', len(str.encode(contents)))
