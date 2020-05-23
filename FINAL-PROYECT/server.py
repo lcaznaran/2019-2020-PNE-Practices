@@ -10,7 +10,6 @@ PORT = 8080
 #ensembl info
 server = "rest.ensembl.org"
 params = "?content-type=application/json"
-
 def list_total_species(specie):
     species_list=[]
     endpoint = "/info/species"  # specific endpoint for this function
@@ -260,7 +259,6 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                         </html>"""
                     status = 404
             elif verb == "/geneInfo":
-                try:
                     contents = f"""
                     <!DOCTYPE html>
                     <html lang="en">
@@ -271,45 +269,118 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     <body style="background-color: rgb(64,224,208);">"""
                     pair = arguments[1]
                     division = pair.split("?")
-                    if len(division) == 2:
-                        specie_g = division[1]
-                        endpoint = f"/xrefs/symbol/homo_sapiens/{specie_g}" #id gene human
-                        conn = http.client.HTTPConnection(server)
-                        try:
-                            conn.request("GET", endpoint + params)
-                        except ConnectionRefusedError:
-                            print("ERROR! Cannot connect to the Server")
-                            exit()
-                        resp = conn.getresponse()
-                        data = resp.read().decode("utf-8")
-                        data = json.loads(data)
-                        ID = data[0]
-                        gene = ID["id"] #obtain gene in ensembl: we can find this data on wikipedia
-                        #we need another endpoint, we have the id to use sequence/id/---
-                        endpoint1 = f"lookup/id/{gene}"
-                        conn1 = http.client.HTTPConnection(server)
-                        try:
-                            conn1.request("GET", endpoint1 + params)
-                        except ConnectionRefusedError:
-                            print("ERROR! Cannot connect to the Server")
-                            exit()
-                        resp1 = conn1.getresponse()
-                        data1 = resp1.read().decode("utf-8")
-                        data1 = json.loads(data1)
-                        contents += f"""<p> The info of this human  gene ({specie_g}) is:</p>
-                        <p>-The start point is: {data1["start"]}</p>
-                        <p>-The end point is: {data1["end"]}</p>
-                        <p>-The length of the gen is: {data1["end"]-data1["start"]}</p>
-                        <p>-The id of the gene is: {gene}</p>
-                        <p>-The gen is on the chromosome: {data1["seq_region_name"]}</p>"""
-                        status = 200
-                except:
-                    contents = Path("Error.html").read_text()
+                    n, specie_g = division[0].split("=")
+                    endpoint = f"/xrefs/symbol/homo_sapiens/{specie_g}" #id gene human
+                    conn = http.client.HTTPConnection(server)
+                    try:
+                        conn.request("GET", endpoint + params)
+                    except ConnectionRefusedError:
+                        print("ERROR! Cannot connect to the Server")
+                        exit()
+                    resp = conn.getresponse()
+                    data = resp.read().decode("utf-8")
+                    data = json.loads(data)
+                    ID = data[0]
+                    gene = ID["id"] #obtain gene in ensembl: we can find this data on wikipedia
+                    #we need another endpoint, we have the id to use sequence/id/---
+                    endpoint1 = f"lookup/id/{gene}"
+                    conn1 = http.client.HTTPConnection(server)
+                    try:
+                        conn1.request("GET", endpoint1 + params)
+                    except ConnectionRefusedError:
+                        print("ERROR! Cannot connect to the Server")
+                        exit()
+                    resp1 = conn1.getresponse()
+                    data1 = resp1.read().decode("utf-8")
+                    data1 = json.loads(data1)
+                    contents += f"""<p> The info of this human  gene ({specie_g}) is:</p>
+                    <p>-The start point is: {data1["start"]}</p>
+                    <p>-The end point is: {data1["end"]}</p>
+                    <p>-The length of the gen is: {data1["end"]-data1["start"]}</p>
+                    <p>-The id of the gene is: {gene}</p>
+                    <p>-The gen is on the chromosome: {data1["seq_region_name"]}</p>"""
                     contents += f"""<a href="/">Main page</a>
-                                        </body>
-                                        </html>"""
-                    status = 404
-
+                    </body>
+                    </html>"""
+                    status = 200
+            elif verb == "/geneCalc":
+                    contents = f"""
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>OPERATIONS OF THE HUMAN GENE</title>
+                    </head>
+                    <body style="background-color: rgb(64,224,208);">"""
+                    pair = arguments[1]
+                    division = pair.split("=")
+                    specie_n = division[1]
+                    endpoint = f"/xrefs/symbol/homo_sapiens/{specie_n}" #id gene human
+                    conn = http.client.HTTPConnection(server)
+                    try:
+                        conn.request("GET", endpoint + params)
+                    except ConnectionRefusedError:
+                        print("ERROR! Cannot connect to the Server")
+                        exit()
+                    resp = conn.getresponse()
+                    data = resp.read().decode("utf-8")
+                    data = json.loads(data)
+                    ID = data[0]
+                    gene = ID["id"] #obtain gene in ensembl: we can find this data on wikipedia
+                    #we need another endpoint, we have the id to use sequence/id/---
+                    endpoint1 = f"sequence/id/{gene}"
+                    conn1 = http.client.HTTPConnection(server)
+                    try:
+                        conn1.request("GET", endpoint1 + params)
+                    except ConnectionRefusedError:
+                        print("ERROR! Cannot connect to the Server")
+                        exit()
+                    resp1 = conn1.getresponse()
+                    data1 = resp1.read().decode("utf-8")
+                    data1 = json.loads(data1)
+                    sequence = data1["seq"]
+                    s = Seq(sequence)
+                    count_bases = s.count()
+                    contents += f"""<p>The number of bases in the sequence of {gene}</p>
+                    <p>A: {count_bases["A"]}</p>
+                    <p>C: {count_bases["C"]}</p>
+                    <p>T: {count_bases["T"]}</p>
+                    <p>G: {count_bases["G"]}</p>"""
+                    contents += f"""<a href="/">Main page</a>
+                    </body>
+                    </html>"""
+                    status = 200
+            elif verb == "/geneList":
+                    contents = f"""
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>LIST OF GENES</title>
+                    </head>
+                    <body style="background-color: rgb(64,224,208);">"""
+                    pair = arguments[1]
+                    division = pair.split("&")
+                    chr_name, chromo = division[0].split("=")
+                    chr_start, start = division[1].split("=")
+                    chr_end, end = division[2].split("=")
+                    params1 = "?feature=gene;content-type=application/json"
+                    endpoint = f"/overlap/region/human/{chromo}:{start}-{end}"
+                    conn = http.client.HTTPConnection(server)
+                    try:
+                        conn.request("GET", endpoint + params1)
+                    except ConnectionRefusedError:
+                        print("ERROR! Cannot connect to the Server")
+                        exit()
+                    resp = conn.getresponse()
+                    data = resp.read().decode("utf-8")
+                    data = json.loads(data)
+                    for e in data:
+                        contents += f"""<p>{e["external_name"]}</p>"""
+                    contents += f"""<a href="/">Main page</a>
+                       </body>
+                       </html>"""
+                    status = 200
             self.send_response(status)
             self.send_header('Content-Type', 'text/html')
             self.send_header('Content-Length', len(str.encode(contents)))

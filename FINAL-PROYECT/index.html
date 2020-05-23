@@ -27,7 +27,24 @@
     </form>
     <p>4) Sequence of a human gen:</p>
     <form action="/geneSeq" method="get">
-        Select species : <input type="text" name="gene">
+        Select a gen : <input type="text" name="gene">
+        <input type="submit" value="Send">
+    </form>
+    <p>5) Info of a human gen:</p>
+    <form action="/geneInfo" method="get">
+        Select a gen : <input type="text" name="gene">
+        <input type="submit" value="Send">
+    </form>
+    <p>6) Operations of a human gen:</p>
+    <form action="/geneCalc" method="get">
+        Select a gen : <input type="text" name="gene">
+        <input type="submit" value="Send">
+    </form>
+    <p>7) Localization of genes:</p>
+    <form action="/geneList" method="get">
+        Select a chromosome : <input type="text" name="chromo">
+        Select a start point : <input type="text" name="start">
+        Select an end point : <input type="text" name="end">
         <input type="submit" value="Send">
     </form>
 
