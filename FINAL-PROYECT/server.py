@@ -90,7 +90,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                 </html>"""
                         status = 200
                     else:
-                        if len(info) >= (limit):
+                        if len(info) >= limit:
                             contents += f"""<p>The limit that you have selected is: {limit}</p>
                                             <p>The species are:</p>
                                                </body>
@@ -227,7 +227,6 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     pair = arguments[1]
                     division = pair.split("=")
                     specie_n = division[1]
-                    values = ""
                     endpoint = f"/xrefs/symbol/homo_sapiens/{specie_n}" #id gene human
                     conn = http.client.HTTPConnection(server)
                     try:
@@ -260,7 +259,56 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                         </body>
                                         </html>"""
                     status = 404
-
+            elif verb == "/geneInfo":
+                try:
+                    contents = f"""
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>INFORMATION OF THE HUMAN GENE</title>
+                    </head>
+                    <body style="background-color: rgb(64,224,208);">"""
+                    pair = arguments[1]
+                    division = pair.split("?")
+                    if len(division) == 2:
+                        specie_g = division[1]
+                        endpoint = f"/xrefs/symbol/homo_sapiens/{specie_g}" #id gene human
+                        conn = http.client.HTTPConnection(server)
+                        try:
+                            conn.request("GET", endpoint + params)
+                        except ConnectionRefusedError:
+                            print("ERROR! Cannot connect to the Server")
+                            exit()
+                        resp = conn.getresponse()
+                        data = resp.read().decode("utf-8")
+                        data = json.loads(data)
+                        ID = data[0]
+                        gene = ID["id"] #obtain gene in ensembl: we can find this data on wikipedia
+                        #we need another endpoint, we have the id to use sequence/id/---
+                        endpoint1 = f"lookup/id/{gene}"
+                        conn1 = http.client.HTTPConnection(server)
+                        try:
+                            conn1.request("GET", endpoint1 + params)
+                        except ConnectionRefusedError:
+                            print("ERROR! Cannot connect to the Server")
+                            exit()
+                        resp1 = conn1.getresponse()
+                        data1 = resp1.read().decode("utf-8")
+                        data1 = json.loads(data1)
+                        contents += f"""<p> The info of this human  gene ({specie_g}) is:</p>
+                        <p>-The start point is: {data1["start"]}</p>
+                        <p>-The end point is: {data1["end"]}</p>
+                        <p>-The length of the gen is: {data1["end"]-data1["start"]}</p>
+                        <p>-The id of the gene is: {gene}</p>
+                        <p>-The gen is on the chromosome: {data1["seq_region_name"]}</p>"""
+                        status = 200
+                except:
+                    contents = Path("Error.html").read_text()
+                    contents += f"""<a href="/">Main page</a>
+                                        </body>
+                                        </html>"""
+                    status = 404
 
             self.send_response(status)
             self.send_header('Content-Type', 'text/html')
