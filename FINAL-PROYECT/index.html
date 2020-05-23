@@ -6,7 +6,7 @@
 </head>
 <body style="background-color: rgb(0,139,139)">
     <h1>BROWSING HUMAN AND VERTEBRATES GENOME</h1>
-    <h2>BROWSING HUMAN AND VERTEBRATES GENOME</h2>
+    <h2>BASIC + MEDIUM LEVEL SERVICES</h2>
     <p>1) List of species in the genome database</p>
     <form action="/listSpecies" method="get">
         Limit :  <input type="number" name="limit" min="1" max="286">
@@ -23,6 +23,11 @@
         <br>
              <br>
         Select a chromosome : <input type="text" name="chromo">
+        <input type="submit" value="Send">
+    </form>
+    <p>4) Sequence of a human gen:</p>
+    <form action="/geneSeq" method="get">
+        Select species : <input type="text" name="gene">
         <input type="submit" value="Send">
     </form>
 

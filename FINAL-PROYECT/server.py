@@ -11,6 +11,25 @@ PORT = 8080
 server = "rest.ensembl.org"
 params = "?content-type=application/json"
 
+def list_total_species(specie):
+    species_list=[]
+    endpoint = "/info/species"  # specific endpoint for this function
+    conn = http.client.HTTPConnection(server)
+    try:
+        conn.request("GET", endpoint + params)
+    except (ConnectionRefusedError, gaierror):
+        print("ERROR! Cannot connect to the Server")
+        exit()
+    resp = conn.getresponse()
+    data = resp.read().decode()
+    data = json.loads(data)
+    info = data['species']
+    for i in info:
+        species_list.append(i["common_name"])
+    if specie not in species_list:
+        resp = "Specie not in ensembl"
+    return resp
+
 
 socketserver.TCPServer.allow_reuse_address = True
 
@@ -87,6 +106,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                         </body>
                                         </html>"""
                             status = 200
+
             elif verb == "/karyotype":
                 contents = f"""
                 <!DOCTYPE html>
@@ -100,7 +120,14 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                 pair = arguments[1]
                 division = pair.split("?")
                 n, namespecie = division[0].split("=")
-                if namespecie != "":
+                if list_total_species(namespecie) == "Specie not in ensembl":
+                    contents = Path("Error.html").read_text()
+                    contents += f"""<a href="/">Main page</a>
+                    </body>
+                    </html>"""
+                    status = 404
+
+                elif namespecie != "":
                     endpoint = "info/assembly/"  # specific endpoint for this function
                     conn = http.client.HTTPConnection(server)
                     try:
