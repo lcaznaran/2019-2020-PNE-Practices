@@ -65,6 +65,877 @@ http://localhost:8080/listSpecies?limit=300
 </html><a href="/">Main page</a>
                                                             </body>
                                                             </html>
+*TEST 4----------
+*Input:
+http://localhost:8080/listSpecies?limit=
+*output:
+  <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>LIST OF SPECIES</title>
+                        <p>The total number of species is:286</p>
+                    </head>
+                    <body style="background-color: rgb(64,224,208);">
+                                    <ol>
+                                    ·pig
+                                    </ol>
+                                    <ol>
+                                    ·American pika
+                                    </ol>
+                                    <ol>
+                                    ·African ostrich
+                                    </ol>
+                                    <ol>
+                                    ·Nile tilapia
+                                    </ol>
+                                    <ol>
+                                    ·channel catfish
+                                    </ol>
+                                    <ol>
+                                    ·West African mud turtle
+                                    </ol>
+                                    <ol>
+                                    ·channel bull blenny
+                                    </ol>
+                                    <ol>
+                                    ·Sooty mangabey
+                                    </ol>
+                                    <ol>
+                                    ·bottlenosed dolphin
+                                    </ol>
+                                    <ol>
+                                    ·naked mole-rat
+                                    </ol>
+                                    <ol>
+                                    ·brown trout
+                                    </ol>
+                                    <ol>
+                                    ·eastern brown snake
+                                    </ol>
+                                    <ol>
+                                    ·south eastern house mouse
+                                    </ol>
+                                    <ol>
+                                    ·spiny chromis
+                                    </ol>
+                                    <ol>
+                                    ·Western Lowland Gorilla
+                                    </ol>
+                                    <ol>
+                                    ·silver-eye
+                                    </ol>
+                                    <ol>
+                                    ·Hoffmann's two-fingered sloth
+                                    </ol>
+                                    <ol>
+                                    ·Eurasian sparrowhawk
+                                    </ol>
+                                    <ol>
+                                    ·house mouse
+                                    </ol>
+                                    <ol>
+                                    ·sailfin molly
+                                    </ol>
+                                    <ol>
+                                    ·greater bamboo lemur
+                                    </ol>
+                                    <ol>
+                                    ·mangrove rivulus
+                                    </ol>
+                                    <ol>
+                                    ·platypus
+                                    </ol>
+                                    <ol>
+                                    ·live sharksucker
+                                    </ol>
+                                    <ol>
+                                    ·large flying fox
+                                    </ol>
+                                    <ol>
+                                    ·house mouse
+                                    </ol>
+                                    <ol>
+                                    ·Domestic ferret
+                                    </ol>
+                                    <ol>
+                                    ·coelacanth
+                                    </ol>
+                                    <ol>
+                                    ·lion
+                                    </ol>
+                                    <ol>
+                                    ·Siamese fighting fish
+                                    </ol>
+                                    <ol>
+                                    ·pig
+                                    </ol>
+                                    <ol>
+                                    ·Brazilian guinea pig
+                                    </ol>
+                                    <ol>
+                                    ·sheepshead minnow
+                                    </ol>
+                                    <ol>
+                                    ·beluga whale
+                                    </ol>
+                                    <ol>
+                                    ·domestic yak
+                                    </ol>
+                                    <ol>
+                                    ·orbiculate cardinalfish
+                                    </ol>
+                                    <ol>
+                                    ·Chinese hamster
+                                    </ol>
+                                    <ol>
+                                    ·Kakapo
+                                    </ol>
+                                    <ol>
+                                    ·Bornean orangutan
+                                    </ol>
+                                    <ol>
+                                    ·Daurian ground squirrel
+                                    </ol>
+                                    <ol>
+                                    ·pig
+                                    </ol>
+                                    <ol>
+                                    ·house mouse
+                                    </ol>
+                                    <ol>
+                                    ·common carp huanghe
+                                    </ol>
+                                    <ol>
+                                    ·Three-toed box turtle
+                                    </ol>
+                                    <ol>
+                                    ·tongue sole
+                                    </ol>
+                                    <ol>
+                                    ·chimpanzee
+                                    </ol>
+                                    <ol>
+                                    ·Ma's night monkey
+                                    </ol>
+                                    <ol>
+                                    ·red-bellied piranha
+                                    </ol>
+                                    <ol>
+                                    ·pig
+                                    </ol>
+                                    <ol>
+                                    ·Drill
+                                    </ol>
+                                    <ol>
+                                    ·green anole
+                                    </ol>
+                                    <ol>
+                                    ·common mallard
+                                    </ol>
+                                    <ol>
+                                    ·common carp german mirror
+                                    </ol>
+                                    <ol>
+                                    ·birds
+                                    </ol>
+                                    <ol>
+                                    ·white-tufted-ear marmoset
+                                    </ol>
+                                    <ol>
+                                    ·Chinese medaka
+                                    </ol>
+                                    <ol>
+                                    ·greater amberjack
+                                    </ol>
+                                    <ol>
+                                    ·house mouse
+                                    </ol>
+                                    <ol>
+                                    ·dark-eyed junco
+                                    </ol>
+                                    <ol>
+                                    ·house mouse
+                                    </ol>
+                                    <ol>
+                                    ·Arctic ground squirrel
+                                    </ol>
+                                    <ol>
+                                    ·pig
+                                    </ol>
+                                    <ol>
+                                    ·mallard
+                                    </ol>
+                                    <ol>
+                                    ·dog
+                                    </ol>
+                                    <ol>
+                                    ·Great Tit
+                                    </ol>
+                                    <ol>
+                                    ·pig
+                                    </ol>
+                                    <ol>
+                                    ·mainland tiger snake
+                                    </ol>
+                                    <ol>
+                                    ·pig
+                                    </ol>
+                                    <ol>
+                                    ·small Madagascar hedgehog
+                                    </ol>
+                                    <ol>
+                                    ·climbing perch
+                                    </ol>
+                                    <ol>
+                                    ·tuatara
+                                    </ol>
+                                    <ol>
+                                    ·wild yak
+                                    </ol>
+                                    <ol>
+                                    ·small-eared galago
+                                    </ol>
+                                    <ol>
+                                    ·Degu
+                                    </ol>
+                                    <ol>
+                                    ·Siberian musk deer
+                                    </ol>
+                                    <ol>
+                                    ·northern pike
+                                    </ol>
+                                    <ol>
+                                    ·pig
+                                    </ol>
+                                    <ol>
+                                    ·gilthead seabream
+                                    </ol>
+                                    <ol>
+                                    ·Ord's kangaroo rat
+                                    </ol>
+                                    <ol>
+                                    ·Ring-necked pheasant
+                                    </ol>
+                                    <ol>
+                                    ·mummichog
+                                    </ol>
+                                    <ol>
+                                    ·American mink
+                                    </ol>
+                                    <ol>
+                                    ·Tasmanian devil
+                                    </ol>
+                                    <ol>
+                                    ·horned golden-line barbel
+                                    </ol>
+                                    <ol>
+                                    ·Shrew mouse
+                                    </ol>
+                                    <ol>
+                                    ·Golden Hamster
+                                    </ol>
+                                    <ol>
+                                    ·Pachon cavefish
+                                    </ol>
+                                    <ol>
+                                    ·eastern european house mouse
+                                    </ol>
+                                    <ol>
+                                    ·hybrid cattle
+                                    </ol>
+                                    <ol>
+                                    ·Canada lynx
+                                    </ol>
+                                    <ol>
+                                    ·tammar wallaby
+                                    </ol>
+                                    <ol>
+                                    ·Argentine black and white tegu
+                                    </ol>
+                                    <ol>
+                                    ·Monterrey platyfish
+                                    </ol>
+                                    <ol>
+                                    ·blue tit
+                                    </ol>
+                                    <ol>
+                                    ·Japanese quail
+                                    </ol>
+                                    <ol>
+                                    ·little brown bat
+                                    </ol>
+                                    <ol>
+                                    ·giant panda
+                                    </ol>
+                                    <ol>
+                                    ·Chinook salmon
+                                    </ol>
+                                    <ol>
+                                    ·western European hedgehog
+                                    </ol>
+                                    <ol>
+                                    ·Ryukyu mouse
+                                    </ol>
+                                    <ol>
+                                    ·Chinese hamster
+                                    </ol>
+                                    <ol>
+                                    ·northern tree shrew
+                                    </ol>
+                                    <ol>
+                                    ·central bearded dragon
+                                    </ol>
+                                    <ol>
+                                    ·Amazon molly
+                                    </ol>
+                                    <ol>
+                                    ·helmeted guineafowl
+                                    </ol>
+                                    <ol>
+                                    ·three-spined stickleback
+                                    </ol>
+                                    <ol>
+                                    ·Northern American deer mouse
+                                    </ol>
+                                    <ol>
+                                    ·baker's yeast
+                                    </ol>
+                                    <ol>
+                                    ·dog
+                                    </ol>
+                                    <ol>
+                                    ·golden eagle
+                                    </ol>
+                                    <ol>
+                                    ·tiger tail seahorse
+                                    </ol>
+                                    <ol>
+                                    ·Chacoan peccary
+                                    </ol>
+                                    <ol>
+                                    ·Japanese medaka HdrR
+                                    </ol>
+                                    <ol>
+                                    ·sea lamprey
+                                    </ol>
+                                    <ol>
+                                    ·Mexican tetra
+                                    </ol>
+                                    <ol>
+                                    ·Common snapping turtle
+                                    </ol>
+                                    <ol>
+                                    ·American black bear
+                                    </ol>
+                                    <ol>
+                                    ·Okarito brown kiwi
+                                    </ol>
+                                    <ol>
+                                    ·Gouldian finch
+                                    </ol>
+                                    <ol>
+                                    ·Mongolian gerbil
+                                    </ol>
+                                    <ol>
+                                    ·Sea squirt Ciona intestinalis
+                                    </ol>
+                                    <ol>
+                                    ·house mouse
+                                    </ol>
+                                    <ol>
+                                    ·Great spotted kiwi
+                                    </ol>
+                                    <ol>
+                                    ·western mosquitofish
+                                    </ol>
+                                    <ol>
+                                    ·Periophthalmus magnuspinnatus
+                                    </ol>
+                                    <ol>
+                                    ·house mouse
+                                    </ol>
+                                    <ol>
+                                    ·Collared flycatcher
+                                    </ol>
+                                    <ol>
+                                    ·yellow-billed parrot
+                                    </ol>
+                                    <ol>
+                                    ·house mouse
+                                    </ol>
+                                    <ol>
+                                    ·Pig-tailed macaque
+                                    </ol>
+                                    <ol>
+                                    ·dingo
+                                    </ol>
+                                    <ol>
+                                    ·rainbow trout
+                                    </ol>
+                                    <ol>
+                                    ·alpaca
+                                    </ol>
+                                    <ol>
+                                    ·zig-zag eel
+                                    </ol>
+                                    <ol>
+                                    ·Inshore hagfish
+                                    </ol>
+                                    <ol>
+                                    ·common carp
+                                    </ol>
+                                    <ol>
+                                    ·nine-banded armadillo
+                                    </ol>
+                                    <ol>
+                                    ·pig
+                                    </ol>
+                                    <ol>
+                                    ·gray short-tailed opossum
+                                    </ol>
+                                    <ol>
+                                    ·lyretail cichlid
+                                    </ol>
+                                    <ol>
+                                    ·Goat
+                                    </ol>
+                                    <ol>
+                                    ·barramundi perch
+                                    </ol>
+                                    <ol>
+                                    ·small tree finch
+                                    </ol>
+                                    <ol>
+                                    ·western european house mouse
+                                    </ol>
+                                    <ol>
+                                    ·American beaver
+                                    </ol>
+                                    <ol>
+                                    ·pig
+                                    </ol>
+                                    <ol>
+                                    ·elephant shark
+                                    </ol>
+                                    <ol>
+                                    ·sperm whale
+                                    </ol>
+                                    <ol>
+                                    ·Spotted gar
+                                    </ol>
+                                    <ol>
+                                    ·house mouse
+                                    </ol>
+                                    <ol>
+                                    ·blue tilapia
+                                    </ol>
+                                    <ol>
+                                    ·southern platyfish
+                                    </ol>
+                                    <ol>
+                                    ·medium ground-finch
+                                    </ol>
+                                    <ol>
+                                    ·Paramormyrops kingsleyae
+                                    </ol>
+                                    <ol>
+                                    ·Philippine tarsier
+                                    </ol>
+                                    <ol>
+                                    ·common wall lizard
+                                    </ol>
+                                    <ol>
+                                    ·swan goose
+                                    </ol>
+                                    <ol>
+                                    ·blue-ringed sea krait
+                                    </ol>
+                                    <ol>
+                                    ·common canary
+                                    </ol>
+                                    <ol>
+                                    ·Chinese hamster
+                                    </ol>
+                                    <ol>
+                                    ·African green monkey
+                                    </ol>
+                                    <ol>
+                                    ·golden-collared manakin
+                                    </ol>
+                                    <ol>
+                                    ·Long-tailed chinchilla
+                                    </ol>
+                                    <ol>
+                                    ·zebra finch
+                                    </ol>
+                                    <ol>
+                                    ·Sea squirt Ciona savignyi
+                                    </ol>
+                                    <ol>
+                                    ·Norway rat
+                                    </ol>
+                                    <ol>
+                                    ·ocean sunfish
+                                    </ol>
+                                    <ol>
+                                    ·little spotted kiwi
+                                    </ol>
+                                    <ol>
+                                    ·Indian medaka
+                                    </ol>
+                                    <ol>
+                                    ·cattle
+                                    </ol>
+                                    <ol>
+                                    ·leopard
+                                    </ol>
+                                    <ol>
+                                    ·Atlantic salmon
+                                    </ol>
+                                    <ol>
+                                    ·Alpine marmot
+                                    </ol>
+                                    <ol>
+                                    ·large yellow croaker
+                                    </ol>
+                                    <ol>
+                                    ·Upper Galilee mountains blind mole rat
+                                    </ol>
+                                    <ol>
+                                    ·Goodes thornscrub tortoise
+                                    </ol>
+                                    <ol>
+                                    ·Indian peafowl
+                                    </ol>
+                                    <ol>
+                                    ·common carp hebao red
+                                    </ol>
+                                    <ol>
+                                    ·denticle herring
+                                    </ol>
+                                    <ol>
+                                    ·koala
+                                    </ol>
+                                    <ol>
+                                    ·Midas cichlid
+                                    </ol>
+                                    <ol>
+                                    ·golden-line barbel
+                                    </ol>
+                                    <ol>
+                                    ·turbot
+                                    </ol>
+                                    <ol>
+                                    ·ruff
+                                    </ol>
+                                    <ol>
+                                    ·pig
+                                    </ol>
+                                    <ol>
+                                    ·pig
+                                    </ol>
+                                    <ol>
+                                    ·human
+                                    </ol>
+                                    <ol>
+                                    ·burrowing owl
+                                    </ol>
+                                    <ol>
+                                    ·Atlantic cod
+                                    </ol>
+                                    <ol>
+                                    ·Burton's mouthbrooder
+                                    </ol>
+                                    <ol>
+                                    ·donkey
+                                    </ol>
+                                    <ol>
+                                    ·domestic guinea pig
+                                    </ol>
+                                    <ol>
+                                    ·clown anemonefish
+                                    </ol>
+                                    <ol>
+                                    ·golden pheasant
+                                    </ol>
+                                    <ol>
+                                    ·Domestic sheep
+                                    </ol>
+                                    <ol>
+                                    ·red fox
+                                    </ol>
+                                    <ol>
+                                    ·bonobo
+                                    </ol>
+                                    <ol>
+                                    ·Indian glassy fish
+                                    </ol>
+                                    <ol>
+                                    ·spotted green pufferfish
+                                    </ol>
+                                    <ol>
+                                    ·ballan wrasse
+                                    </ol>
+                                    <ol>
+                                    ·pig
+                                    </ol>
+                                    <ol>
+                                    ·hybrid cattle
+                                    </ol>
+                                    <ol>
+                                    ·Budgie
+                                    </ol>
+                                    <ol>
+                                    ·meerkat
+                                    </ol>
+                                    <ol>
+                                    ·European seabass
+                                    </ol>
+                                    <ol>
+                                    ·African savanna elephant
+                                    </ol>
+                                    <ol>
+                                    ·emu
+                                    </ol>
+                                    <ol>
+                                    ·Tiger
+                                    </ol>
+                                    <ol>
+                                    ·fruit fly
+                                    </ol>
+                                    <ol>
+                                    ·steppe mouse
+                                    </ol>
+                                    <ol>
+                                    ·swamp eel
+                                    </ol>
+                                    <ol>
+                                    ·Japanese medaka HNI
+                                    </ol>
+                                    <ol>
+                                    ·jewelled blenny
+                                    </ol>
+                                    <ol>
+                                    ·house mouse
+                                    </ol>
+                                    <ol>
+                                    ·zebra mbuna
+                                    </ol>
+                                    <ol>
+                                    ·white-throated sparrow
+                                    </ol>
+                                    <ol>
+                                    ·Western painted turtle
+                                    </ol>
+                                    <ol>
+                                    ·zebrafish
+                                    </ol>
+                                    <ol>
+                                    ·goldfish
+                                    </ol>
+                                    <ol>
+                                    ·horse
+                                    </ol>
+                                    <ol>
+                                    ·greater horseshoe bat
+                                    </ol>
+                                    <ol>
+                                    ·eastern happy
+                                    </ol>
+                                    <ol>
+                                    ·tropical clawed frog
+                                    </ol>
+                                    <ol>
+                                    ·Spoon-billed sandpiper
+                                    </ol>
+                                    <ol>
+                                    ·Angola colobus
+                                    </ol>
+                                    <ol>
+                                    ·algerian mouse
+                                    </ol>
+                                    <ol>
+                                    ·dog
+                                    </ol>
+                                    <ol>
+                                    ·Macaque
+                                    </ol>
+                                    <ol>
+                                    ·thirteen-lined ground squirrel
+                                    </ol>
+                                    <ol>
+                                    ·gray mouse lemur
+                                    </ol>
+                                    <ol>
+                                    ·common wombat
+                                    </ol>
+                                    <ol>
+                                    ·rabbit
+                                    </ol>
+                                    <ol>
+                                    ·Polar bear
+                                    </ol>
+                                    <ol>
+                                    ·Atlantic herring
+                                    </ol>
+                                    <ol>
+                                    ·chicken
+                                    </ol>
+                                    <ol>
+                                    ·fugu
+                                    </ol>
+                                    <ol>
+                                    ·bicolor damselfish
+                                    </ol>
+                                    <ol>
+                                    ·house mouse
+                                    </ol>
+                                    <ol>
+                                    ·reedfish
+                                    </ol>
+                                    <ol>
+                                    ·Chinese softshell turtle
+                                    </ol>
+                                    <ol>
+                                    ·blunt-snouted clingfish
+                                    </ol>
+                                    <ol>
+                                    ·C.elegans
+                                    </ol>
+                                    <ol>
+                                    ·Coquerel's sifaka
+                                    </ol>
+                                    <ol>
+                                    ·Agassiz's desert tortoise
+                                    </ol>
+                                    <ol>
+                                    ·guppy
+                                    </ol>
+                                    <ol>
+                                    ·javanese ricefish
+                                    </ol>
+                                    <ol>
+                                    ·Makobe Island cichlid
+                                    </ol>
+                                    <ol>
+                                    ·vole
+                                    </ol>
+                                    <ol>
+                                    ·gelada
+                                    </ol>
+                                    <ol>
+                                    ·pinecone soldierfish
+                                    </ol>
+                                    <ol>
+                                    ·Arabian camel
+                                    </ol>
+                                    <ol>
+                                    ·Japanese medaka HSOK
+                                    </ol>
+                                    <ol>
+                                    ·Asiatic black bear
+                                    </ol>
+                                    <ol>
+                                    ·Bengalese finch
+                                    </ol>
+                                    <ol>
+                                    ·cape rock hyrax
+                                    </ol>
+                                    <ol>
+                                    ·domestic turkey
+                                    </ol>
+                                    <ol>
+                                    ·European shrew
+                                    </ol>
+                                    <ol>
+                                    ·Golden snub-nosed monkey
+                                    </ol>
+                                    <ol>
+                                    ·Black snub-nosed monkey
+                                    </ol>
+                                    <ol>
+                                    ·round goby
+                                    </ol>
+                                    <ol>
+                                    ·Asian bonytongue
+                                    </ol>
+                                    <ol>
+                                    ·electric eel
+                                    </ol>
+                                    <ol>
+                                    ·American bison
+                                    </ol>
+                                    <ol>
+                                    ·shortfin molly
+                                    </ol>
+                                    <ol>
+                                    ·orange clownfish
+                                    </ol>
+                                    <ol>
+                                    ·Komodo dragon
+                                    </ol>
+                                    <ol>
+                                    ·blind barbel
+                                    </ol>
+                                    <ol>
+                                    ·Ugandan red Colobus
+                                    </ol>
+                                    <ol>
+                                    ·Olive baboon
+                                    </ol>
+                                    <ol>
+                                    ·Lesser Egyptian jerboa
+                                    </ol>
+                                    <ol>
+                                    ·domestic cat
+                                    </ol>
+                                    <ol>
+                                    ·pink-footed goose
+                                    </ol>
+                                    <ol>
+                                    ·White-headed capuchin
+                                    </ol>
+                                    <ol>
+                                    ·Australian saltwater crocodile
+                                    </ol>
+                                    <ol>
+                                    ·naked mole-rat
+                                    </ol>
+                                    <ol>
+                                    ·house mouse
+                                    </ol>
+                                    <ol>
+                                    ·Abingdon island giant tortoise
+                                    </ol>
+                                    <ol>
+                                    ·Northern white-cheeked gibbon
+                                    </ol>
+                                    <ol>
+                                    ·house mouse
+                                    </ol>
+                                    <ol>
+                                    ·yellowtail amberjack
+                                    </ol>
+                                    <ol>
+                                    ·Bolivian squirrel monkey
+                                    </ol>
+                                    <ol>
+                                    ·Crab-eating macaque
+                                    </ol>
+                                    <ol>
+                                    ·Damara mole rat
+                                    </ol>
+                                    <ol>
+                                    ·huchen
+                                    </ol>
+                                    <ol>
+                                    ·rufous-capped babbler
+                                    </ol>
+                                    <ol>
+                                    ·blue-crowned manakin
+                                    </ol><a href="/">Main page</a>
+                                        </body>
+                                        </html>
 ----> karyotype endpoint
 *TEST 1----------
 *Input:
