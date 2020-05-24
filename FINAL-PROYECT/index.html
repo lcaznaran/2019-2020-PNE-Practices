@@ -7,49 +7,51 @@
 <body style="background-color: rgb(0,139,139)">
     <h1>BROWSING HUMAN AND VERTEBRATES GENOME</h1>
     <h2>BASIC + MEDIUM LEVEL SERVICES</h2>
-    <p>1) List of species in the genome database</p>
-    <form action="/listSpecies" method="get">
+    <h3>Basic services:</h3>
+        <ol>
+        <p>1) List of species in the genome database</p>
+        <form action="/listSpecies" method="get">
         Limit :  <input type="number" name="limit" min="1" max="286">
         <input type="submit" value="Send">
-    </form>
-    <p>2) Information about the karyotype:</p>
-    <form action="/karyotype" method="get">
-        Select species : <input type="text" name="specie">
-        <input type="submit" value="Send">
-    </form>
-    <p>3) Chromosome Length:</p>
-    <form action="/chromosomeLength" method="get">
-        Select species : <input type="text" name="specie">
-        <br>
-             <br>
-        Select a chromosome : <input type="text" name="chromo">
-        <input type="submit" value="Send">
-    </form>
-    <p>4) Sequence of a human gen:</p>
-    <form action="/geneSeq" method="get">
-        Select a gen : <input type="text" name="gene">
-        <input type="submit" value="Send">
-    </form>
-    <p>5) Info of a human gen:</p>
-    <form action="/geneInfo" method="get">
-        Select a gen : <input type="text" name="gene">
-        <input type="submit" value="Send">
-    </form>
-    <p>6) Operations of a human gen:</p>
-    <form action="/geneCalc" method="get">
-        Select a gen : <input type="text" name="gene">
-        <input type="submit" value="Send">
-    </form>
-    <p>7) Localization of genes:</p>
-    <form action="/geneList" method="get">
-        Select a chromosome : <input type="text" name="chromo">
-        <br>
-        Select a start point : <input type="text" name="start">
-        <br>
-        Select an end point : <input type="text" name="end">
-        <br>
-        <input type="submit" value="Send">
-    </form>
-
+        </form>
+            <p>2) Information about the karyotype:</p>
+        <form action="/karyotype" method="get">
+            Select species : <input type="text" name="specie">
+            <input type="submit" value="Send">
+        </form>
+        <p>3) Chromosome Length:</p>
+        <form action="/chromosomeLength" method="get">
+            Select species : <input type="text" name="specie">
+            <br>
+                 <br>
+            Select a chromosome : <input type="text" name="chromosome">
+            <input type="submit" value="Send">
+        </form>
+        </ol>
+    <h3>Medium services:</h3>
+        <ol>
+        <p>4) Sequence of a human gen:</p>
+        <form action="/geneSeq" method="get">
+            Select a gen : <input type="text" name="gene">
+            <input type="submit" value="Send">
+        </form>
+        <p>5) Info of a human gen:</p>
+        <form action="/geneInfo" method="get">
+            Select a gen : <input type="text" name="gene">
+            <input type="submit" value="Send">
+        </form>
+        <p>6) Operations of a human gen:</p>
+        <form action="/geneCalc" method="get">
+            Select a gen : <input type="text" name="gene">
+            <input type="submit" value="Send">
+        </form>
+        <p>7) Localization of genes:</p>
+        <form action="/geneList" method="get">
+            Select a chromosome : <input type="text" name="chromo"><br/>
+            Select a start point : <input type="text" name="start"><br/>
+            Select an end point : <input type="text" name="end"><br/>
+            <input type="submit" value="Send">
+        </form>
+        </ol>
   </body>
 </html>

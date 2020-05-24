@@ -10,6 +10,7 @@ PORT = 8080
 #ensembl info
 server = "rest.ensembl.org"
 params = "?content-type=application/json"
+
 def list_total_species(specie):
     species_list=[]
     endpoint = "/info/species"  # specific endpoint for this function
@@ -49,62 +50,60 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
             elif verb == "/listSpecies":
                 endpoint = "/info/species"  # specific endpoint for this function
                 conn = http.client.HTTPConnection(server)
+                try:
+                    conn.request("GET", endpoint + params)
+                except (ConnectionRefusedError, gaierror):
+                    print("ERROR! Cannot connect to the Server")
+                    exit()
+                resp = conn.getresponse()
+                data = resp.read().decode()
+                data = json.loads(data)
+                info = data['species']
+                lim_list = []
+                contents = f"""<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>LIST OF SPECIES</title>
+                    <p>The total number of species is:{len(info)}</p>
+                </head>
+                <body style="background-color: rgb(64,224,208);">"""
                 pair = arguments[1]
-                name,values = pair.split("=")
-                limit = values
-                if values == "":
-                    contents = Path("Error.html").read_text()
-                    contents += f"""<a href="/">Main page</a>
-                                        </body>
-                                        </html>"""
-                    status = 404
-                else:
+                name, values = pair.split("=")
+                if values != "":
                     limit = int(values)
-                    try:
-                        conn.request("GET", endpoint + params)
-                    except (ConnectionRefusedError, gaierror):
-                        print("ERROR! Cannot connect to the Server")
-                        exit()
-                    resp = conn.getresponse()
-                    data = resp.read().decode()
-                    data = json.loads(data)
-                    info = data['species']
-                    lim_list = []
-                    contents = f"""<!DOCTYPE html>
-                    <html lang="en">
-                    <head>
-                        <meta charset="UTF-8">
-                        <title>LIST OF SPECIES</title>
-                        <p>The total number of species is:{len(info)}</p>
-                    </head>
-                    <body style="background-color: rgb(64,224,208);">"""
-                    if values == "":
+                    if len(info) >= limit:
+                        contents += f"""<p>The limit that you have selected is: {limit}</p>
+                        <p>The species are:</p>
+                           </body>
+                           </html>"""
                         for i in info:
-                            contents += f"""
-                            <ol>
-                            <li>-{i["common_name"]}</li>
-                            </ol>"""
+                            lim_list.append(i["common_name"])
+                            if limit == len(lim_list):
+                                for e in lim_list:
+                                    contents += f"""<ol>
+                                    ·-{e}
+                                    </ol>"""
                         contents += """<a href="/">Main page</a>
-                                </body>
-                                </html>"""
+                                    </body>
+                                    </html>"""
                         status = 200
                     else:
-                        if len(info) >= limit:
-                            contents += f"""<p>The limit that you have selected is: {limit}</p>
-                                            <p>The species are:</p>
-                                               </body>
-                                               </html>"""
-                            for i in info:
-                                lim_list.append(i["common_name"])
-                                if limit == len(lim_list):
-                                    for e in lim_list:
-                                        contents += f"""<il>
-                                        <ol>-{e}</ol>
-                                        </il>"""
-                            contents += """<a href="/">Main page</a>
-                                        </body>
-                                        </html>"""
-                            status = 200
+                        contents = Path("Error.html").read_text()
+                        contents += f"""<a href="/">Main page</a>
+                        </body>
+                        </html>"""
+                        status = 404
+                else:
+                    for i in info:
+                        contents += f"""
+                                <ol>
+                                ·{i["common_name"]}
+                                </ol>"""
+                    contents += """<a href="/">Main page</a>
+                                    </body>
+                                    </html>"""
+                    status = 200
 
             elif verb == "/karyotype":
                 contents = f"""
@@ -208,10 +207,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                                     </html>"""
                     status = 200
 
-                contents = Path("Error.html").read_text()
-                contents += f"""<a href="/">Main page</a>
-                                    </body>
-                                    </html>"""
+
                 status = 404
             elif verb == "/geneSeq":
                 try:
@@ -259,6 +255,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                         </html>"""
                     status = 404
             elif verb == "/geneInfo":
+                try:
                     contents = f"""
                     <!DOCTYPE html>
                     <html lang="en">
@@ -303,7 +300,15 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     </body>
                     </html>"""
                     status = 200
+                except:
+                    contents = Path("Error.html").read_text()
+                    contents += f"""<a href="/">Main page</a>
+                    </body>
+                    </html>"""
+                    status = 404
+
             elif verb == "/geneCalc":
+                try:
                     contents = f"""
                     <!DOCTYPE html>
                     <html lang="en">
@@ -350,7 +355,14 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     </body>
                     </html>"""
                     status = 200
+                except:
+                    contents = Path("Error.html").read_text()
+                    contents += f"""<a href="/">Main page</a>
+                    </body>
+                    </html>"""
+                    status = 404
             elif verb == "/geneList":
+                try:
                     contents = f"""
                     <!DOCTYPE html>
                     <html lang="en">
@@ -381,6 +393,12 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                        </body>
                        </html>"""
                     status = 200
+                except:
+                    contents = Path("Error.html").read_text()
+                    contents += f"""<a href="/">Main page</a>
+                    </body>
+                    </html>"""
+                    status = 404
             self.send_response(status)
             self.send_header('Content-Type', 'text/html')
             self.send_header('Content-Length', len(str.encode(contents)))
