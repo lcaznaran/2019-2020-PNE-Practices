@@ -7,15 +7,15 @@ c = Client(IP, PORT)
 
 print(c)
 
-print("* Testing PING...")
+print("· Testing PING...")
 print(c.talk("PING")) #THIS IS THE COMMAND ORDERED BY THE CLIENT
 
-print("* Testing GET...")
+print("· Testing GET...")
 for i in range(5):
     cmd = f"GET {i}"
     print(f"GET {i}: {c.talk(cmd)}", end="") #not \n
 
-print("* Testing INFO...")
+print("· Testing INFO...")
 s = c.talk("GET 0")
 cmd = f"INFO {s}"
 print(c.talk(cmd))
