@@ -66,7 +66,10 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     <head>
                         <meta charset="UTF-8">
                         <title>LIST OF SPECIES</title>
-                        <p>The total number of species is:{len(info)}</p>
+                        <p>
+                        <b>The total number of species is:</b>
+                        {len(info)}
+                        </p>
                     </head>
                     <body style="background-color: rgb(64,224,208);">"""
                     pair = arguments[1]
@@ -74,8 +77,11 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     if values != "":
                         limit = int(values)
                         if len(info) >= limit:
-                            contents += f"""<p>The limit that you have selected is: {limit}</p>
-                            <p>The species are:</p>
+                            contents += f"""<p>
+                            <b>The limit that you have selected is:</b>
+                            {limit}
+                            </p>
+                            <b>The species are:</b>
                                </body>
                                </html>"""
                             for i in info:
@@ -83,7 +89,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                 if limit == len(lim_list):
                                     for e in lim_list:
                                         contents += f"""<ol>
-                                        ·-{e}
+                                        ·{e}
                                         </ol>"""
                             contents += """<a href="/">Main page</a>
                                         </body>
@@ -119,7 +125,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                 <head>
                     <meta charset="UTF-8">
                     <title>KARYOTYPE OF A SPECIE</title>
-                    <p>The names of the chromosomes are:</p>
+                    <b>The names of the chromosomes are:</b>
                 </head>
                 <body style="background-color: rgb(64,224,208);">"""
                 pair = arguments[1]
@@ -209,7 +215,11 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                         <title>LENGTH OF THE SELECTED CHROMOSOME</title>
                                     </head>
                                     <body style="background-color: rgb(64,224,208);">"""
-                                    contents += f"""<p>The length of the chromosome {chromosome} of the {specie} is: {chr_length}</p>"""
+                                    contents += f"""<p>The length of the chromosome 
+                                    <b>{chromosome}</b> of the 
+                                    <b>{specie}</b> is: 
+                                    <b>{chr_length}</b>
+                                    </p>"""
                                 contents += f"""<a href="/">Main page</a>
                                                         </body>
                                                         </html>"""
@@ -257,7 +267,8 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     data1 = resp1.read().decode("utf-8")
                     data1 = json.loads(data1)
                     sequence = data1["seq"]
-                    contents += f"""<p> The sequence of the human  gene {specie_n}({gene} in ensembl) is:</p> 
+                    contents += f"""<p> The sequence of the human  gene 
+                    <b>{specie_n}</b>({gene} in ensembl) is:</p> 
                     <textarea readdonly rows = "20" cols = "60">{sequence}</textarea>"""
                     contents += f"""<br>
                     <a href="/">Main page</a> 

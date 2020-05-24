@@ -1,34 +1,40 @@
 Test report
---------------
-----> genSeq endpoint
+--------------BASIS LEVEL
+----> listSpecies endpoint
 *TEST 1----------
 *Input:
 http://localhost:8080/listSpecies?limit=5
 *output:
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>LIST OF SPECIES</title>
-    <p>The total number of species is:286</p>
-</head>
-<body style="background-color: rgb(64,224,208);"><p>The limit that you have selected is: 5</p>
-                        <p>The species are:</p>
-                           </body>
-                           </html><il>
-                    <ol>-mainland tiger snake</ol>
-                    </il><il>
-                    <ol>-birds</ol>
-                    </il><il>
-                    <ol>-red fox</ol>
-                    </il><il>
-                    <ol>-sperm whale</ol>
-                    </il><il>
-                    <ol>-Great spotted kiwi</ol>
-                    </il><a href="/">Main page</a>
-                    </body>
-                    </html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>LIST OF SPECIES</title>
+                        <p>
+                        <b>The total number of species is:</b>
+                        286
+                        </p>
+                    </head>
+                    <body style="background-color: rgb(64,224,208);"><p>
+                            <b>The limit that you have selected is:</b>
+                            5
+                            </p>
+                            <b>The species are:</b>
+                               </body>
+                               </html><ol>
+                                        ·pig
+                                        </ol><ol>
+                                        ·American pika
+                                        </ol><ol>
+                                        ·African ostrich
+                                        </ol><ol>
+                                        ·Nile tilapia
+                                        </ol><ol>
+                                        ·channel catfish
+                                        </ol><a href="/">Main page</a>
+                                        </body>
+                                        </html>
 *TEST 2----------
 *Input:
 http://localhost:8080/listSpecies?limit=value
@@ -73,7 +79,10 @@ http://localhost:8080/listSpecies?limit=
                     <head>
                         <meta charset="UTF-8">
                         <title>LIST OF SPECIES</title>
-                        <p>The total number of species is:286</p>
+                        <p>
+                        <b>The total number of species is:</b>
+                        286
+                        </p>
                     </head>
                     <body style="background-color: rgb(64,224,208);">
                                     <ol>
@@ -947,7 +956,7 @@ http://localhost:8080/karyotype?specie=human
                 <head>
                     <meta charset="UTF-8">
                     <title>KARYOTYPE OF A SPECIE</title>
-                    <p>The names of the chromosomes are:</p>
+                    <b>The names of the chromosomes are:</b>
                 </head>
                 <body style="background-color: rgb(64,224,208);"><ol>
                         -1
@@ -1031,7 +1040,7 @@ http://localhost:8080/karyotype?specie=dog
                 <head>
                     <meta charset="UTF-8">
                     <title>KARYOTYPE OF A SPECIE</title>
-                    <p>The names of the chromosomes are:</p>
+                    <b>The names of the chromosomes are:</b>
                 </head>
                 <body style="background-color: rgb(64,224,208);"><ol>
                         -1
@@ -1146,7 +1155,11 @@ http://localhost:8080/chromosomeLength?specie=mouse&chromosome=18
     <meta charset="UTF-8">
     <title>LENGTH OF THE SELECTED CHROMOSOME</title>
 </head>
-<body style="background-color: rgb(64,224,208);"><p>The length of the chromosome 18 of the mouse is: 90702639</p><a href="/">Main page</a>
+<body style="background-color: rgb(64,224,208);"><p>The length of the chromosome
+<b>18</b> of the
+<b>mouse</b> is:
+<b>90702639</b>
+</p><a href="/">Main page</a>
                     </body>
                     </html>
 *TEST 2----------
@@ -1167,5 +1180,3 @@ http://localhost:8080/chromosomeLength?specie=0&chromosome=0
 </html><a href="/">Main page</a>
                                                             </body>
                                                             </html>
-
-
