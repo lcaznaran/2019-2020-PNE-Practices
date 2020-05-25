@@ -23,15 +23,15 @@ http://localhost:8080/listSpecies?limit=5
                             <b>The species are:</b>
                                </body>
                                </html><ol>
-                                        ·pig
+                                        ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
                                         </ol><ol>
-                                        ·American pika
+                                        ·American pika <a href="https://en.wikipedia.org/wiki/American pika">Click for more info about American pika</a>
                                         </ol><ol>
-                                        ·African ostrich
+                                        ·African ostrich <a href="https://en.wikipedia.org/wiki/African ostrich">Click for more info about African ostrich</a>
                                         </ol><ol>
-                                        ·Nile tilapia
+                                        ·Nile tilapia <a href="https://en.wikipedia.org/wiki/Nile tilapia">Click for more info about Nile tilapia</a>
                                         </ol><ol>
-                                        ·channel catfish
+                                        ·channel catfish <a href="https://en.wikipedia.org/wiki/channel catfish">Click for more info about channel catfish</a>
                                         </ol><a href="/">Main page</a>
                                         </body>
                                         </html>
@@ -71,6 +71,880 @@ http://localhost:8080/listSpecies?limit=300
 </html><a href="/">Main page</a>
                                                             </body>
                                                             </html>
+*TEST 4----------
+*Input:
+http://localhost:8080/listSpecies?limit=
+*output:
+  <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>LIST OF SPECIES</title>
+                        <p>
+                        <b>The total number of species is:</b>
+                        286
+                        </p>
+                    </head>
+                    <body style="background-color: rgb(64,224,208);">
+                                    <ol>
+                                    ·mainland tiger snake <a href="https://en.wikipedia.org/wiki/mainland tiger snake">Click for more info about mainland tiger snake</a>
+                                    </ol>
+                                    <ol>
+                                    ·birds <a href="https://en.wikipedia.org/wiki/birds">Click for more info about birds</a>
+                                    </ol>
+                                    <ol>
+                                    ·red fox <a href="https://en.wikipedia.org/wiki/red fox">Click for more info about red fox</a>
+                                    </ol>
+                                    <ol>
+                                    ·sperm whale <a href="https://en.wikipedia.org/wiki/sperm whale">Click for more info about sperm whale</a>
+                                    </ol>
+                                    <ol>
+                                    ·Great spotted kiwi <a href="https://en.wikipedia.org/wiki/Great spotted kiwi">Click for more info about Great spotted kiwi</a>
+                                    </ol>
+                                    <ol>
+                                    ·pinecone soldierfish <a href="https://en.wikipedia.org/wiki/pinecone soldierfish">Click for more info about pinecone soldierfish</a>
+                                    </ol>
+                                    <ol>
+                                    ·greater bamboo lemur <a href="https://en.wikipedia.org/wiki/greater bamboo lemur">Click for more info about greater bamboo lemur</a>
+                                    </ol>
+                                    <ol>
+                                    ·Kakapo <a href="https://en.wikipedia.org/wiki/Kakapo">Click for more info about Kakapo</a>
+                                    </ol>
+                                    <ol>
+                                    ·sea lamprey <a href="https://en.wikipedia.org/wiki/sea lamprey">Click for more info about sea lamprey</a>
+                                    </ol>
+                                    <ol>
+                                    ·Gouldian finch <a href="https://en.wikipedia.org/wiki/Gouldian finch">Click for more info about Gouldian finch</a>
+                                    </ol>
+                                    <ol>
+                                    ·electric eel <a href="https://en.wikipedia.org/wiki/electric eel">Click for more info about electric eel</a>
+                                    </ol>
+                                    <ol>
+                                    ·Okarito brown kiwi <a href="https://en.wikipedia.org/wiki/Okarito brown kiwi">Click for more info about Okarito brown kiwi</a>
+                                    </ol>
+                                    <ol>
+                                    ·large yellow croaker <a href="https://en.wikipedia.org/wiki/large yellow croaker">Click for more info about large yellow croaker</a>
+                                    </ol>
+                                    <ol>
+                                    ·channel bull blenny <a href="https://en.wikipedia.org/wiki/channel bull blenny">Click for more info about channel bull blenny</a>
+                                    </ol>
+                                    <ol>
+                                    ·house mouse <a href="https://en.wikipedia.org/wiki/house mouse">Click for more info about house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·zebrafish <a href="https://en.wikipedia.org/wiki/zebrafish">Click for more info about zebrafish</a>
+                                    </ol>
+                                    <ol>
+                                    ·common carp huanghe <a href="https://en.wikipedia.org/wiki/common carp huanghe">Click for more info about common carp huanghe</a>
+                                    </ol>
+                                    <ol>
+                                    ·house mouse <a href="https://en.wikipedia.org/wiki/house mouse">Click for more info about house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·horned golden-line barbel <a href="https://en.wikipedia.org/wiki/horned golden-line barbel">Click for more info about horned golden-line barbel</a>
+                                    </ol>
+                                    <ol>
+                                    ·northern tree shrew <a href="https://en.wikipedia.org/wiki/northern tree shrew">Click for more info about northern tree shrew</a>
+                                    </ol>
+                                    <ol>
+                                    ·white-tufted-ear marmoset <a href="https://en.wikipedia.org/wiki/white-tufted-ear marmoset">Click for more info about white-tufted-ear marmoset</a>
+                                    </ol>
+                                    <ol>
+                                    ·Spotted gar <a href="https://en.wikipedia.org/wiki/Spotted gar">Click for more info about Spotted gar</a>
+                                    </ol>
+                                    <ol>
+                                    ·Tiger <a href="https://en.wikipedia.org/wiki/Tiger">Click for more info about Tiger</a>
+                                    </ol>
+                                    <ol>
+                                    ·Goat <a href="https://en.wikipedia.org/wiki/Goat">Click for more info about Goat</a>
+                                    </ol>
+                                    <ol>
+                                    ·central bearded dragon <a href="https://en.wikipedia.org/wiki/central bearded dragon">Click for more info about central bearded dragon</a>
+                                    </ol>
+                                    <ol>
+                                    ·naked mole-rat <a href="https://en.wikipedia.org/wiki/naked mole-rat">Click for more info about naked mole-rat</a>
+                                    </ol>
+                                    <ol>
+                                    ·American black bear <a href="https://en.wikipedia.org/wiki/American black bear">Click for more info about American black bear</a>
+                                    </ol>
+                                    <ol>
+                                    ·spotted green pufferfish <a href="https://en.wikipedia.org/wiki/spotted green pufferfish">Click for more info about spotted green pufferfish</a>
+                                    </ol>
+                                    <ol>
+                                    ·meerkat <a href="https://en.wikipedia.org/wiki/meerkat">Click for more info about meerkat</a>
+                                    </ol>
+                                    <ol>
+                                    ·steppe mouse <a href="https://en.wikipedia.org/wiki/steppe mouse">Click for more info about steppe mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·lyretail cichlid <a href="https://en.wikipedia.org/wiki/lyretail cichlid">Click for more info about lyretail cichlid</a>
+                                    </ol>
+                                    <ol>
+                                    ·mangrove rivulus <a href="https://en.wikipedia.org/wiki/mangrove rivulus">Click for more info about mangrove rivulus</a>
+                                    </ol>
+                                    <ol>
+                                    ·Western Lowland Gorilla <a href="https://en.wikipedia.org/wiki/Western Lowland Gorilla">Click for more info about Western Lowland Gorilla</a>
+                                    </ol>
+                                    <ol>
+                                    ·Domestic sheep <a href="https://en.wikipedia.org/wiki/Domestic sheep">Click for more info about Domestic sheep</a>
+                                    </ol>
+                                    <ol>
+                                    ·bicolor damselfish <a href="https://en.wikipedia.org/wiki/bicolor damselfish">Click for more info about bicolor damselfish</a>
+                                    </ol>
+                                    <ol>
+                                    ·coelacanth <a href="https://en.wikipedia.org/wiki/coelacanth">Click for more info about coelacanth</a>
+                                    </ol>
+                                    <ol>
+                                    ·Midas cichlid <a href="https://en.wikipedia.org/wiki/Midas cichlid">Click for more info about Midas cichlid</a>
+                                    </ol>
+                                    <ol>
+                                    ·Ma's night monkey <a href="https://en.wikipedia.org/wiki/Ma's night monkey">Click for more info about Ma's night monkey</a>
+                                    </ol>
+                                    <ol>
+                                    ·Pachon cavefish <a href="https://en.wikipedia.org/wiki/Pachon cavefish">Click for more info about Pachon cavefish</a>
+                                    </ol>
+                                    <ol>
+                                    ·common wombat <a href="https://en.wikipedia.org/wiki/common wombat">Click for more info about common wombat</a>
+                                    </ol>
+                                    <ol>
+                                    ·blue-ringed sea krait <a href="https://en.wikipedia.org/wiki/blue-ringed sea krait">Click for more info about blue-ringed sea krait</a>
+                                    </ol>
+                                    <ol>
+                                    ·gilthead seabream <a href="https://en.wikipedia.org/wiki/gilthead seabream">Click for more info about gilthead seabream</a>
+                                    </ol>
+                                    <ol>
+                                    ·Indian peafowl <a href="https://en.wikipedia.org/wiki/Indian peafowl">Click for more info about Indian peafowl</a>
+                                    </ol>
+                                    <ol>
+                                    ·Pig-tailed macaque <a href="https://en.wikipedia.org/wiki/Pig-tailed macaque">Click for more info about Pig-tailed macaque</a>
+                                    </ol>
+                                    <ol>
+                                    ·American beaver <a href="https://en.wikipedia.org/wiki/American beaver">Click for more info about American beaver</a>
+                                    </ol>
+                                    <ol>
+                                    ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·common mallard <a href="https://en.wikipedia.org/wiki/common mallard">Click for more info about common mallard</a>
+                                    </ol>
+                                    <ol>
+                                    ·Shrew mouse <a href="https://en.wikipedia.org/wiki/Shrew mouse">Click for more info about Shrew mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·western mosquitofish <a href="https://en.wikipedia.org/wiki/western mosquitofish">Click for more info about western mosquitofish</a>
+                                    </ol>
+                                    <ol>
+                                    ·Agassiz's desert tortoise <a href="https://en.wikipedia.org/wiki/Agassiz's desert tortoise">Click for more info about Agassiz's desert tortoise</a>
+                                    </ol>
+                                    <ol>
+                                    ·helmeted guineafowl <a href="https://en.wikipedia.org/wiki/helmeted guineafowl">Click for more info about helmeted guineafowl</a>
+                                    </ol>
+                                    <ol>
+                                    ·Amazon molly <a href="https://en.wikipedia.org/wiki/Amazon molly">Click for more info about Amazon molly</a>
+                                    </ol>
+                                    <ol>
+                                    ·Chinese hamster <a href="https://en.wikipedia.org/wiki/Chinese hamster">Click for more info about Chinese hamster</a>
+                                    </ol>
+                                    <ol>
+                                    ·Bornean orangutan <a href="https://en.wikipedia.org/wiki/Bornean orangutan">Click for more info about Bornean orangutan</a>
+                                    </ol>
+                                    <ol>
+                                    ·Olive baboon <a href="https://en.wikipedia.org/wiki/Olive baboon">Click for more info about Olive baboon</a>
+                                    </ol>
+                                    <ol>
+                                    ·orbiculate cardinalfish <a href="https://en.wikipedia.org/wiki/orbiculate cardinalfish">Click for more info about orbiculate cardinalfish</a>
+                                    </ol>
+                                    <ol>
+                                    ·zebra mbuna <a href="https://en.wikipedia.org/wiki/zebra mbuna">Click for more info about zebra mbuna</a>
+                                    </ol>
+                                    <ol>
+                                    ·African savanna elephant <a href="https://en.wikipedia.org/wiki/African savanna elephant">Click for more info about African savanna elephant</a>
+                                    </ol>
+                                    <ol>
+                                    ·American mink <a href="https://en.wikipedia.org/wiki/American mink">Click for more info about American mink</a>
+                                    </ol>
+                                    <ol>
+                                    ·domestic guinea pig <a href="https://en.wikipedia.org/wiki/domestic guinea pig">Click for more info about domestic guinea pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·platypus <a href="https://en.wikipedia.org/wiki/platypus">Click for more info about platypus</a>
+                                    </ol>
+                                    <ol>
+                                    ·White-headed capuchin <a href="https://en.wikipedia.org/wiki/White-headed capuchin">Click for more info about White-headed capuchin</a>
+                                    </ol>
+                                    <ol>
+                                    ·golden-collared manakin <a href="https://en.wikipedia.org/wiki/golden-collared manakin">Click for more info about golden-collared manakin</a>
+                                    </ol>
+                                    <ol>
+                                    ·Three-toed box turtle <a href="https://en.wikipedia.org/wiki/Three-toed box turtle">Click for more info about Three-toed box turtle</a>
+                                    </ol>
+                                    <ol>
+                                    ·vole <a href="https://en.wikipedia.org/wiki/vole">Click for more info about vole</a>
+                                    </ol>
+                                    <ol>
+                                    ·tropical clawed frog <a href="https://en.wikipedia.org/wiki/tropical clawed frog">Click for more info about tropical clawed frog</a>
+                                    </ol>
+                                    <ol>
+                                    ·common carp <a href="https://en.wikipedia.org/wiki/common carp">Click for more info about common carp</a>
+                                    </ol>
+                                    <ol>
+                                    ·blue tilapia <a href="https://en.wikipedia.org/wiki/blue tilapia">Click for more info about blue tilapia</a>
+                                    </ol>
+                                    <ol>
+                                    ·Collared flycatcher <a href="https://en.wikipedia.org/wiki/Collared flycatcher">Click for more info about Collared flycatcher</a>
+                                    </ol>
+                                    <ol>
+                                    ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·Spoon-billed sandpiper <a href="https://en.wikipedia.org/wiki/Spoon-billed sandpiper">Click for more info about Spoon-billed sandpiper</a>
+                                    </ol>
+                                    <ol>
+                                    ·African ostrich <a href="https://en.wikipedia.org/wiki/African ostrich">Click for more info about African ostrich</a>
+                                    </ol>
+                                    <ol>
+                                    ·Periophthalmus magnuspinnatus <a href="https://en.wikipedia.org/wiki/Periophthalmus magnuspinnatus">Click for more info about Periophthalmus magnuspinnatus</a>
+                                    </ol>
+                                    <ol>
+                                    ·Chinese softshell turtle <a href="https://en.wikipedia.org/wiki/Chinese softshell turtle">Click for more info about Chinese softshell turtle</a>
+                                    </ol>
+                                    <ol>
+                                    ·Asiatic black bear <a href="https://en.wikipedia.org/wiki/Asiatic black bear">Click for more info about Asiatic black bear</a>
+                                    </ol>
+                                    <ol>
+                                    ·reedfish <a href="https://en.wikipedia.org/wiki/reedfish">Click for more info about reedfish</a>
+                                    </ol>
+                                    <ol>
+                                    ·Philippine tarsier <a href="https://en.wikipedia.org/wiki/Philippine tarsier">Click for more info about Philippine tarsier</a>
+                                    </ol>
+                                    <ol>
+                                    ·clown anemonefish <a href="https://en.wikipedia.org/wiki/clown anemonefish">Click for more info about clown anemonefish</a>
+                                    </ol>
+                                    <ol>
+                                    ·huchen <a href="https://en.wikipedia.org/wiki/huchen">Click for more info about huchen</a>
+                                    </ol>
+                                    <ol>
+                                    ·horse <a href="https://en.wikipedia.org/wiki/horse">Click for more info about horse</a>
+                                    </ol>
+                                    <ol>
+                                    ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·Chinese hamster <a href="https://en.wikipedia.org/wiki/Chinese hamster">Click for more info about Chinese hamster</a>
+                                    </ol>
+                                    <ol>
+                                    ·house mouse <a href="https://en.wikipedia.org/wiki/house mouse">Click for more info about house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·Mexican tetra <a href="https://en.wikipedia.org/wiki/Mexican tetra">Click for more info about Mexican tetra</a>
+                                    </ol>
+                                    <ol>
+                                    ·small Madagascar hedgehog <a href="https://en.wikipedia.org/wiki/small Madagascar hedgehog">Click for more info about small Madagascar hedgehog</a>
+                                    </ol>
+                                    <ol>
+                                    ·jewelled blenny <a href="https://en.wikipedia.org/wiki/jewelled blenny">Click for more info about jewelled blenny</a>
+                                    </ol>
+                                    <ol>
+                                    ·tongue sole <a href="https://en.wikipedia.org/wiki/tongue sole">Click for more info about tongue sole</a>
+                                    </ol>
+                                    <ol>
+                                    ·house mouse <a href="https://en.wikipedia.org/wiki/house mouse">Click for more info about house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·leopard <a href="https://en.wikipedia.org/wiki/leopard">Click for more info about leopard</a>
+                                    </ol>
+                                    <ol>
+                                    ·live sharksucker <a href="https://en.wikipedia.org/wiki/live sharksucker">Click for more info about live sharksucker</a>
+                                    </ol>
+                                    <ol>
+                                    ·Great Tit <a href="https://en.wikipedia.org/wiki/Great Tit">Click for more info about Great Tit</a>
+                                    </ol>
+                                    <ol>
+                                    ·northern pike <a href="https://en.wikipedia.org/wiki/northern pike">Click for more info about northern pike</a>
+                                    </ol>
+                                    <ol>
+                                    ·yellowtail amberjack <a href="https://en.wikipedia.org/wiki/yellowtail amberjack">Click for more info about yellowtail amberjack</a>
+                                    </ol>
+                                    <ol>
+                                    ·ruff <a href="https://en.wikipedia.org/wiki/ruff">Click for more info about ruff</a>
+                                    </ol>
+                                    <ol>
+                                    ·alpaca <a href="https://en.wikipedia.org/wiki/alpaca">Click for more info about alpaca</a>
+                                    </ol>
+                                    <ol>
+                                    ·gray mouse lemur <a href="https://en.wikipedia.org/wiki/gray mouse lemur">Click for more info about gray mouse lemur</a>
+                                    </ol>
+                                    <ol>
+                                    ·Ugandan red Colobus <a href="https://en.wikipedia.org/wiki/Ugandan red Colobus">Click for more info about Ugandan red Colobus</a>
+                                    </ol>
+                                    <ol>
+                                    ·human <a href="https://en.wikipedia.org/wiki/human">Click for more info about human</a>
+                                    </ol>
+                                    <ol>
+                                    ·house mouse <a href="https://en.wikipedia.org/wiki/house mouse">Click for more info about house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·Drill <a href="https://en.wikipedia.org/wiki/Drill">Click for more info about Drill</a>
+                                    </ol>
+                                    <ol>
+                                    ·Burton's mouthbrooder <a href="https://en.wikipedia.org/wiki/Burton's mouthbrooder">Click for more info about Burton's mouthbrooder</a>
+                                    </ol>
+                                    <ol>
+                                    ·lion <a href="https://en.wikipedia.org/wiki/lion">Click for more info about lion</a>
+                                    </ol>
+                                    <ol>
+                                    ·burrowing owl <a href="https://en.wikipedia.org/wiki/burrowing owl">Click for more info about burrowing owl</a>
+                                    </ol>
+                                    <ol>
+                                    ·cape rock hyrax <a href="https://en.wikipedia.org/wiki/cape rock hyrax">Click for more info about cape rock hyrax</a>
+                                    </ol>
+                                    <ol>
+                                    ·Indian glassy fish <a href="https://en.wikipedia.org/wiki/Indian glassy fish">Click for more info about Indian glassy fish</a>
+                                    </ol>
+                                    <ol>
+                                    ·gelada <a href="https://en.wikipedia.org/wiki/gelada">Click for more info about gelada</a>
+                                    </ol>
+                                    <ol>
+                                    ·house mouse <a href="https://en.wikipedia.org/wiki/house mouse">Click for more info about house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·Budgie <a href="https://en.wikipedia.org/wiki/Budgie">Click for more info about Budgie</a>
+                                    </ol>
+                                    <ol>
+                                    ·Japanese medaka HNI <a href="https://en.wikipedia.org/wiki/Japanese medaka HNI">Click for more info about Japanese medaka HNI</a>
+                                    </ol>
+                                    <ol>
+                                    ·Chacoan peccary <a href="https://en.wikipedia.org/wiki/Chacoan peccary">Click for more info about Chacoan peccary</a>
+                                    </ol>
+                                    <ol>
+                                    ·pink-footed goose <a href="https://en.wikipedia.org/wiki/pink-footed goose">Click for more info about pink-footed goose</a>
+                                    </ol>
+                                    <ol>
+                                    ·tiger tail seahorse <a href="https://en.wikipedia.org/wiki/tiger tail seahorse">Click for more info about tiger tail seahorse</a>
+                                    </ol>
+                                    <ol>
+                                    ·house mouse <a href="https://en.wikipedia.org/wiki/house mouse">Click for more info about house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·turbot <a href="https://en.wikipedia.org/wiki/turbot">Click for more info about turbot</a>
+                                    </ol>
+                                    <ol>
+                                    ·gray short-tailed opossum <a href="https://en.wikipedia.org/wiki/gray short-tailed opossum">Click for more info about gray short-tailed opossum</a>
+                                    </ol>
+                                    <ol>
+                                    ·greater horseshoe bat <a href="https://en.wikipedia.org/wiki/greater horseshoe bat">Click for more info about greater horseshoe bat</a>
+                                    </ol>
+                                    <ol>
+                                    ·Paramormyrops kingsleyae <a href="https://en.wikipedia.org/wiki/Paramormyrops kingsleyae">Click for more info about Paramormyrops kingsleyae</a>
+                                    </ol>
+                                    <ol>
+                                    ·blind barbel <a href="https://en.wikipedia.org/wiki/blind barbel">Click for more info about blind barbel</a>
+                                    </ol>
+                                    <ol>
+                                    ·rufous-capped babbler <a href="https://en.wikipedia.org/wiki/rufous-capped babbler">Click for more info about rufous-capped babbler</a>
+                                    </ol>
+                                    <ol>
+                                    ·Komodo dragon <a href="https://en.wikipedia.org/wiki/Komodo dragon">Click for more info about Komodo dragon</a>
+                                    </ol>
+                                    <ol>
+                                    ·baker's yeast <a href="https://en.wikipedia.org/wiki/baker's yeast">Click for more info about baker's yeast</a>
+                                    </ol>
+                                    <ol>
+                                    ·Monterrey platyfish <a href="https://en.wikipedia.org/wiki/Monterrey platyfish">Click for more info about Monterrey platyfish</a>
+                                    </ol>
+                                    <ol>
+                                    ·beluga whale <a href="https://en.wikipedia.org/wiki/beluga whale">Click for more info about beluga whale</a>
+                                    </ol>
+                                    <ol>
+                                    ·Western painted turtle <a href="https://en.wikipedia.org/wiki/Western painted turtle">Click for more info about Western painted turtle</a>
+                                    </ol>
+                                    <ol>
+                                    ·Japanese medaka HSOK <a href="https://en.wikipedia.org/wiki/Japanese medaka HSOK">Click for more info about Japanese medaka HSOK</a>
+                                    </ol>
+                                    <ol>
+                                    ·house mouse <a href="https://en.wikipedia.org/wiki/house mouse">Click for more info about house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·Angola colobus <a href="https://en.wikipedia.org/wiki/Angola colobus">Click for more info about Angola colobus</a>
+                                    </ol>
+                                    <ol>
+                                    ·Golden Hamster <a href="https://en.wikipedia.org/wiki/Golden Hamster">Click for more info about Golden Hamster</a>
+                                    </ol>
+                                    <ol>
+                                    ·spiny chromis <a href="https://en.wikipedia.org/wiki/spiny chromis">Click for more info about spiny chromis</a>
+                                    </ol>
+                                    <ol>
+                                    ·naked mole-rat <a href="https://en.wikipedia.org/wiki/naked mole-rat">Click for more info about naked mole-rat</a>
+                                    </ol>
+                                    <ol>
+                                    ·Makobe Island cichlid <a href="https://en.wikipedia.org/wiki/Makobe Island cichlid">Click for more info about Makobe Island cichlid</a>
+                                    </ol>
+                                    <ol>
+                                    ·dog <a href="https://en.wikipedia.org/wiki/dog">Click for more info about dog</a>
+                                    </ol>
+                                    <ol>
+                                    ·fugu <a href="https://en.wikipedia.org/wiki/fugu">Click for more info about fugu</a>
+                                    </ol>
+                                    <ol>
+                                    ·golden pheasant <a href="https://en.wikipedia.org/wiki/golden pheasant">Click for more info about golden pheasant</a>
+                                    </ol>
+                                    <ol>
+                                    ·Crab-eating macaque <a href="https://en.wikipedia.org/wiki/Crab-eating macaque">Click for more info about Crab-eating macaque</a>
+                                    </ol>
+                                    <ol>
+                                    ·koala <a href="https://en.wikipedia.org/wiki/koala">Click for more info about koala</a>
+                                    </ol>
+                                    <ol>
+                                    ·house mouse <a href="https://en.wikipedia.org/wiki/house mouse">Click for more info about house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·Nile tilapia <a href="https://en.wikipedia.org/wiki/Nile tilapia">Click for more info about Nile tilapia</a>
+                                    </ol>
+                                    <ol>
+                                    ·Ring-necked pheasant <a href="https://en.wikipedia.org/wiki/Ring-necked pheasant">Click for more info about Ring-necked pheasant</a>
+                                    </ol>
+                                    <ol>
+                                    ·Ord's kangaroo rat <a href="https://en.wikipedia.org/wiki/Ord's kangaroo rat">Click for more info about Ord's kangaroo rat</a>
+                                    </ol>
+                                    <ol>
+                                    ·large flying fox <a href="https://en.wikipedia.org/wiki/large flying fox">Click for more info about large flying fox</a>
+                                    </ol>
+                                    <ol>
+                                    ·C.elegans <a href="https://en.wikipedia.org/wiki/C.elegans">Click for more info about C.elegans</a>
+                                    </ol>
+                                    <ol>
+                                    ·Alpine marmot <a href="https://en.wikipedia.org/wiki/Alpine marmot">Click for more info about Alpine marmot</a>
+                                    </ol>
+                                    <ol>
+                                    ·mallard <a href="https://en.wikipedia.org/wiki/mallard">Click for more info about mallard</a>
+                                    </ol>
+                                    <ol>
+                                    ·eastern european house mouse <a href="https://en.wikipedia.org/wiki/eastern european house mouse">Click for more info about eastern european house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·hybrid cattle <a href="https://en.wikipedia.org/wiki/hybrid cattle">Click for more info about hybrid cattle</a>
+                                    </ol>
+                                    <ol>
+                                    ·house mouse <a href="https://en.wikipedia.org/wiki/house mouse">Click for more info about house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·round goby <a href="https://en.wikipedia.org/wiki/round goby">Click for more info about round goby</a>
+                                    </ol>
+                                    <ol>
+                                    ·Siamese fighting fish <a href="https://en.wikipedia.org/wiki/Siamese fighting fish">Click for more info about Siamese fighting fish</a>
+                                    </ol>
+                                    <ol>
+                                    ·Polar bear <a href="https://en.wikipedia.org/wiki/Polar bear">Click for more info about Polar bear</a>
+                                    </ol>
+                                    <ol>
+                                    ·Brazilian guinea pig <a href="https://en.wikipedia.org/wiki/Brazilian guinea pig">Click for more info about Brazilian guinea pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·Sooty mangabey <a href="https://en.wikipedia.org/wiki/Sooty mangabey">Click for more info about Sooty mangabey</a>
+                                    </ol>
+                                    <ol>
+                                    ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·Lesser Egyptian jerboa <a href="https://en.wikipedia.org/wiki/Lesser Egyptian jerboa">Click for more info about Lesser Egyptian jerboa</a>
+                                    </ol>
+                                    <ol>
+                                    ·javanese ricefish <a href="https://en.wikipedia.org/wiki/javanese ricefish">Click for more info about javanese ricefish</a>
+                                    </ol>
+                                    <ol>
+                                    ·common wall lizard <a href="https://en.wikipedia.org/wiki/common wall lizard">Click for more info about common wall lizard</a>
+                                    </ol>
+                                    <ol>
+                                    ·rabbit <a href="https://en.wikipedia.org/wiki/rabbit">Click for more info about rabbit</a>
+                                    </ol>
+                                    <ol>
+                                    ·chimpanzee <a href="https://en.wikipedia.org/wiki/chimpanzee">Click for more info about chimpanzee</a>
+                                    </ol>
+                                    <ol>
+                                    ·Siberian musk deer <a href="https://en.wikipedia.org/wiki/Siberian musk deer">Click for more info about Siberian musk deer</a>
+                                    </ol>
+                                    <ol>
+                                    ·dingo <a href="https://en.wikipedia.org/wiki/dingo">Click for more info about dingo</a>
+                                    </ol>
+                                    <ol>
+                                    ·Bolivian squirrel monkey <a href="https://en.wikipedia.org/wiki/Bolivian squirrel monkey">Click for more info about Bolivian squirrel monkey</a>
+                                    </ol>
+                                    <ol>
+                                    ·Long-tailed chinchilla <a href="https://en.wikipedia.org/wiki/Long-tailed chinchilla">Click for more info about Long-tailed chinchilla</a>
+                                    </ol>
+                                    <ol>
+                                    ·fruit fly <a href="https://en.wikipedia.org/wiki/fruit fly">Click for more info about fruit fly</a>
+                                    </ol>
+                                    <ol>
+                                    ·eastern brown snake <a href="https://en.wikipedia.org/wiki/eastern brown snake">Click for more info about eastern brown snake</a>
+                                    </ol>
+                                    <ol>
+                                    ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·Australian saltwater crocodile <a href="https://en.wikipedia.org/wiki/Australian saltwater crocodile">Click for more info about Australian saltwater crocodile</a>
+                                    </ol>
+                                    <ol>
+                                    ·green anole <a href="https://en.wikipedia.org/wiki/green anole">Click for more info about green anole</a>
+                                    </ol>
+                                    <ol>
+                                    ·shortfin molly <a href="https://en.wikipedia.org/wiki/shortfin molly">Click for more info about shortfin molly</a>
+                                    </ol>
+                                    <ol>
+                                    ·tammar wallaby <a href="https://en.wikipedia.org/wiki/tammar wallaby">Click for more info about tammar wallaby</a>
+                                    </ol>
+                                    <ol>
+                                    ·Atlantic salmon <a href="https://en.wikipedia.org/wiki/Atlantic salmon">Click for more info about Atlantic salmon</a>
+                                    </ol>
+                                    <ol>
+                                    ·domestic yak <a href="https://en.wikipedia.org/wiki/domestic yak">Click for more info about domestic yak</a>
+                                    </ol>
+                                    <ol>
+                                    ·Chinese medaka <a href="https://en.wikipedia.org/wiki/Chinese medaka">Click for more info about Chinese medaka</a>
+                                    </ol>
+                                    <ol>
+                                    ·Norway rat <a href="https://en.wikipedia.org/wiki/Norway rat">Click for more info about Norway rat</a>
+                                    </ol>
+                                    <ol>
+                                    ·sheepshead minnow <a href="https://en.wikipedia.org/wiki/sheepshead minnow">Click for more info about sheepshead minnow</a>
+                                    </ol>
+                                    <ol>
+                                    ·small-eared galago <a href="https://en.wikipedia.org/wiki/small-eared galago">Click for more info about small-eared galago</a>
+                                    </ol>
+                                    <ol>
+                                    ·eastern happy <a href="https://en.wikipedia.org/wiki/eastern happy">Click for more info about eastern happy</a>
+                                    </ol>
+                                    <ol>
+                                    ·blue tit <a href="https://en.wikipedia.org/wiki/blue tit">Click for more info about blue tit</a>
+                                    </ol>
+                                    <ol>
+                                    ·algerian mouse <a href="https://en.wikipedia.org/wiki/algerian mouse">Click for more info about algerian mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·Atlantic herring <a href="https://en.wikipedia.org/wiki/Atlantic herring">Click for more info about Atlantic herring</a>
+                                    </ol>
+                                    <ol>
+                                    ·Japanese quail <a href="https://en.wikipedia.org/wiki/Japanese quail">Click for more info about Japanese quail</a>
+                                    </ol>
+                                    <ol>
+                                    ·dog <a href="https://en.wikipedia.org/wiki/dog">Click for more info about dog</a>
+                                    </ol>
+                                    <ol>
+                                    ·little spotted kiwi <a href="https://en.wikipedia.org/wiki/little spotted kiwi">Click for more info about little spotted kiwi</a>
+                                    </ol>
+                                    <ol>
+                                    ·Canada lynx <a href="https://en.wikipedia.org/wiki/Canada lynx">Click for more info about Canada lynx</a>
+                                    </ol>
+                                    <ol>
+                                    ·swamp eel <a href="https://en.wikipedia.org/wiki/swamp eel">Click for more info about swamp eel</a>
+                                    </ol>
+                                    <ol>
+                                    ·southern platyfish <a href="https://en.wikipedia.org/wiki/southern platyfish">Click for more info about southern platyfish</a>
+                                    </ol>
+                                    <ol>
+                                    ·little brown bat <a href="https://en.wikipedia.org/wiki/little brown bat">Click for more info about little brown bat</a>
+                                    </ol>
+                                    <ol>
+                                    ·West African mud turtle <a href="https://en.wikipedia.org/wiki/West African mud turtle">Click for more info about West African mud turtle</a>
+                                    </ol>
+                                    <ol>
+                                    ·nine-banded armadillo <a href="https://en.wikipedia.org/wiki/nine-banded armadillo">Click for more info about nine-banded armadillo</a>
+                                    </ol>
+                                    <ol>
+                                    ·greater amberjack <a href="https://en.wikipedia.org/wiki/greater amberjack">Click for more info about greater amberjack</a>
+                                    </ol>
+                                    <ol>
+                                    ·Eurasian sparrowhawk <a href="https://en.wikipedia.org/wiki/Eurasian sparrowhawk">Click for more info about Eurasian sparrowhawk</a>
+                                    </ol>
+                                    <ol>
+                                    ·Goodes thornscrub tortoise <a href="https://en.wikipedia.org/wiki/Goodes thornscrub tortoise">Click for more info about Goodes thornscrub tortoise</a>
+                                    </ol>
+                                    <ol>
+                                    ·American bison <a href="https://en.wikipedia.org/wiki/American bison">Click for more info about American bison</a>
+                                    </ol>
+                                    <ol>
+                                    ·brown trout <a href="https://en.wikipedia.org/wiki/brown trout">Click for more info about brown trout</a>
+                                    </ol>
+                                    <ol>
+                                    ·Argentine black and white tegu <a href="https://en.wikipedia.org/wiki/Argentine black and white tegu">Click for more info about Argentine black and white tegu</a>
+                                    </ol>
+                                    <ol>
+                                    ·house mouse <a href="https://en.wikipedia.org/wiki/house mouse">Click for more info about house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·Damara mole rat <a href="https://en.wikipedia.org/wiki/Damara mole rat">Click for more info about Damara mole rat</a>
+                                    </ol>
+                                    <ol>
+                                    ·cattle <a href="https://en.wikipedia.org/wiki/cattle">Click for more info about cattle</a>
+                                    </ol>
+                                    <ol>
+                                    ·Macaque <a href="https://en.wikipedia.org/wiki/Macaque">Click for more info about Macaque</a>
+                                    </ol>
+                                    <ol>
+                                    ·golden-line barbel <a href="https://en.wikipedia.org/wiki/golden-line barbel">Click for more info about golden-line barbel</a>
+                                    </ol>
+                                    <ol>
+                                    ·Japanese medaka HdrR <a href="https://en.wikipedia.org/wiki/Japanese medaka HdrR">Click for more info about Japanese medaka HdrR</a>
+                                    </ol>
+                                    <ol>
+                                    ·Black snub-nosed monkey <a href="https://en.wikipedia.org/wiki/Black snub-nosed monkey">Click for more info about Black snub-nosed monkey</a>
+                                    </ol>
+                                    <ol>
+                                    ·blunt-snouted clingfish <a href="https://en.wikipedia.org/wiki/blunt-snouted clingfish">Click for more info about blunt-snouted clingfish</a>
+                                    </ol>
+                                    <ol>
+                                    ·elephant shark <a href="https://en.wikipedia.org/wiki/elephant shark">Click for more info about elephant shark</a>
+                                    </ol>
+                                    <ol>
+                                    ·Northern American deer mouse <a href="https://en.wikipedia.org/wiki/Northern American deer mouse">Click for more info about Northern American deer mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·barramundi perch <a href="https://en.wikipedia.org/wiki/barramundi perch">Click for more info about barramundi perch</a>
+                                    </ol>
+                                    <ol>
+                                    ·common carp german mirror <a href="https://en.wikipedia.org/wiki/common carp german mirror">Click for more info about common carp german mirror</a>
+                                    </ol>
+                                    <ol>
+                                    ·western European hedgehog <a href="https://en.wikipedia.org/wiki/western European hedgehog">Click for more info about western European hedgehog</a>
+                                    </ol>
+                                    <ol>
+                                    ·thirteen-lined ground squirrel <a href="https://en.wikipedia.org/wiki/thirteen-lined ground squirrel">Click for more info about thirteen-lined ground squirrel</a>
+                                    </ol>
+                                    <ol>
+                                    ·Degu <a href="https://en.wikipedia.org/wiki/Degu">Click for more info about Degu</a>
+                                    </ol>
+                                    <ol>
+                                    ·yellow-billed parrot <a href="https://en.wikipedia.org/wiki/yellow-billed parrot">Click for more info about yellow-billed parrot</a>
+                                    </ol>
+                                    <ol>
+                                    ·medium ground-finch <a href="https://en.wikipedia.org/wiki/medium ground-finch">Click for more info about medium ground-finch</a>
+                                    </ol>
+                                    <ol>
+                                    ·golden eagle <a href="https://en.wikipedia.org/wiki/golden eagle">Click for more info about golden eagle</a>
+                                    </ol>
+                                    <ol>
+                                    ·climbing perch <a href="https://en.wikipedia.org/wiki/climbing perch">Click for more info about climbing perch</a>
+                                    </ol>
+                                    <ol>
+                                    ·domestic turkey <a href="https://en.wikipedia.org/wiki/domestic turkey">Click for more info about domestic turkey</a>
+                                    </ol>
+                                    <ol>
+                                    ·Abingdon island giant tortoise <a href="https://en.wikipedia.org/wiki/Abingdon island giant tortoise">Click for more info about Abingdon island giant tortoise</a>
+                                    </ol>
+                                    <ol>
+                                    ·western european house mouse <a href="https://en.wikipedia.org/wiki/western european house mouse">Click for more info about western european house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·Tasmanian devil <a href="https://en.wikipedia.org/wiki/Tasmanian devil">Click for more info about Tasmanian devil</a>
+                                    </ol>
+                                    <ol>
+                                    ·common canary <a href="https://en.wikipedia.org/wiki/common canary">Click for more info about common canary</a>
+                                    </ol>
+                                    <ol>
+                                    ·mummichog <a href="https://en.wikipedia.org/wiki/mummichog">Click for more info about mummichog</a>
+                                    </ol>
+                                    <ol>
+                                    ·giant panda <a href="https://en.wikipedia.org/wiki/giant panda">Click for more info about giant panda</a>
+                                    </ol>
+                                    <ol>
+                                    ·Northern white-cheeked gibbon <a href="https://en.wikipedia.org/wiki/Northern white-cheeked gibbon">Click for more info about Northern white-cheeked gibbon</a>
+                                    </ol>
+                                    <ol>
+                                    ·zebra finch <a href="https://en.wikipedia.org/wiki/zebra finch">Click for more info about zebra finch</a>
+                                    </ol>
+                                    <ol>
+                                    ·goldfish <a href="https://en.wikipedia.org/wiki/goldfish">Click for more info about goldfish</a>
+                                    </ol>
+                                    <ol>
+                                    ·white-throated sparrow <a href="https://en.wikipedia.org/wiki/white-throated sparrow">Click for more info about white-throated sparrow</a>
+                                    </ol>
+                                    <ol>
+                                    ·dark-eyed junco <a href="https://en.wikipedia.org/wiki/dark-eyed junco">Click for more info about dark-eyed junco</a>
+                                    </ol>
+                                    <ol>
+                                    ·guppy <a href="https://en.wikipedia.org/wiki/guppy">Click for more info about guppy</a>
+                                    </ol>
+                                    <ol>
+                                    ·zig-zag eel <a href="https://en.wikipedia.org/wiki/zig-zag eel">Click for more info about zig-zag eel</a>
+                                    </ol>
+                                    <ol>
+                                    ·Chinese hamster <a href="https://en.wikipedia.org/wiki/Chinese hamster">Click for more info about Chinese hamster</a>
+                                    </ol>
+                                    <ol>
+                                    ·Upper Galilee mountains blind mole rat <a href="https://en.wikipedia.org/wiki/Upper Galilee mountains blind mole rat">Click for more info about Upper Galilee mountains blind mole rat</a>
+                                    </ol>
+                                    <ol>
+                                    ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·house mouse <a href="https://en.wikipedia.org/wiki/house mouse">Click for more info about house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·bonobo <a href="https://en.wikipedia.org/wiki/bonobo">Click for more info about bonobo</a>
+                                    </ol>
+                                    <ol>
+                                    ·dog <a href="https://en.wikipedia.org/wiki/dog">Click for more info about dog</a>
+                                    </ol>
+                                    <ol>
+                                    ·ocean sunfish <a href="https://en.wikipedia.org/wiki/ocean sunfish">Click for more info about ocean sunfish</a>
+                                    </ol>
+                                    <ol>
+                                    ·small tree finch <a href="https://en.wikipedia.org/wiki/small tree finch">Click for more info about small tree finch</a>
+                                    </ol>
+                                    <ol>
+                                    ·Sea squirt Ciona savignyi <a href="https://en.wikipedia.org/wiki/Sea squirt Ciona savignyi">Click for more info about Sea squirt Ciona savignyi</a>
+                                    </ol>
+                                    <ol>
+                                    ·rainbow trout <a href="https://en.wikipedia.org/wiki/rainbow trout">Click for more info about rainbow trout</a>
+                                    </ol>
+                                    <ol>
+                                    ·Mongolian gerbil <a href="https://en.wikipedia.org/wiki/Mongolian gerbil">Click for more info about Mongolian gerbil</a>
+                                    </ol>
+                                    <ol>
+                                    ·chicken <a href="https://en.wikipedia.org/wiki/chicken">Click for more info about chicken</a>
+                                    </ol>
+                                    <ol>
+                                    ·blue-crowned manakin <a href="https://en.wikipedia.org/wiki/blue-crowned manakin">Click for more info about blue-crowned manakin</a>
+                                    </ol>
+                                    <ol>
+                                    ·Daurian ground squirrel <a href="https://en.wikipedia.org/wiki/Daurian ground squirrel">Click for more info about Daurian ground squirrel</a>
+                                    </ol>
+                                    <ol>
+                                    ·wild yak <a href="https://en.wikipedia.org/wiki/wild yak">Click for more info about wild yak</a>
+                                    </ol>
+                                    <ol>
+                                    ·Coquerel's sifaka <a href="https://en.wikipedia.org/wiki/Coquerel's sifaka">Click for more info about Coquerel's sifaka</a>
+                                    </ol>
+                                    <ol>
+                                    ·African green monkey <a href="https://en.wikipedia.org/wiki/African green monkey">Click for more info about African green monkey</a>
+                                    </ol>
+                                    <ol>
+                                    ·three-spined stickleback <a href="https://en.wikipedia.org/wiki/three-spined stickleback">Click for more info about three-spined stickleback</a>
+                                    </ol>
+                                    <ol>
+                                    ·Inshore hagfish <a href="https://en.wikipedia.org/wiki/Inshore hagfish">Click for more info about Inshore hagfish</a>
+                                    </ol>
+                                    <ol>
+                                    ·ballan wrasse <a href="https://en.wikipedia.org/wiki/ballan wrasse">Click for more info about ballan wrasse</a>
+                                    </ol>
+                                    <ol>
+                                    ·house mouse <a href="https://en.wikipedia.org/wiki/house mouse">Click for more info about house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·Bengalese finch <a href="https://en.wikipedia.org/wiki/Bengalese finch">Click for more info about Bengalese finch</a>
+                                    </ol>
+                                    <ol>
+                                    ·south eastern house mouse <a href="https://en.wikipedia.org/wiki/south eastern house mouse">Click for more info about south eastern house mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·Common snapping turtle <a href="https://en.wikipedia.org/wiki/Common snapping turtle">Click for more info about Common snapping turtle</a>
+                                    </ol>
+                                    <ol>
+                                    ·sailfin molly <a href="https://en.wikipedia.org/wiki/sailfin molly">Click for more info about sailfin molly</a>
+                                    </ol>
+                                    <ol>
+                                    ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·tuatara <a href="https://en.wikipedia.org/wiki/tuatara">Click for more info about tuatara</a>
+                                    </ol>
+                                    <ol>
+                                    ·European shrew <a href="https://en.wikipedia.org/wiki/European shrew">Click for more info about European shrew</a>
+                                    </ol>
+                                    <ol>
+                                    ·Ryukyu mouse <a href="https://en.wikipedia.org/wiki/Ryukyu mouse">Click for more info about Ryukyu mouse</a>
+                                    </ol>
+                                    <ol>
+                                    ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·European seabass <a href="https://en.wikipedia.org/wiki/European seabass">Click for more info about European seabass</a>
+                                    </ol>
+                                    <ol>
+                                    ·swan goose <a href="https://en.wikipedia.org/wiki/swan goose">Click for more info about swan goose</a>
+                                    </ol>
+                                    <ol>
+                                    ·denticle herring <a href="https://en.wikipedia.org/wiki/denticle herring">Click for more info about denticle herring</a>
+                                    </ol>
+                                    <ol>
+                                    ·bottlenosed dolphin <a href="https://en.wikipedia.org/wiki/bottlenosed dolphin">Click for more info about bottlenosed dolphin</a>
+                                    </ol>
+                                    <ol>
+                                    ·emu <a href="https://en.wikipedia.org/wiki/emu">Click for more info about emu</a>
+                                    </ol>
+                                    <ol>
+                                    ·Arctic ground squirrel <a href="https://en.wikipedia.org/wiki/Arctic ground squirrel">Click for more info about Arctic ground squirrel</a>
+                                    </ol>
+                                    <ol>
+                                    ·Atlantic cod <a href="https://en.wikipedia.org/wiki/Atlantic cod">Click for more info about Atlantic cod</a>
+                                    </ol>
+                                    <ol>
+                                    ·Domestic ferret <a href="https://en.wikipedia.org/wiki/Domestic ferret">Click for more info about Domestic ferret</a>
+                                    </ol>
+                                    <ol>
+                                    ·common carp hebao red <a href="https://en.wikipedia.org/wiki/common carp hebao red">Click for more info about common carp hebao red</a>
+                                    </ol>
+                                    <ol>
+                                    ·orange clownfish <a href="https://en.wikipedia.org/wiki/orange clownfish">Click for more info about orange clownfish</a>
+                                    </ol>
+                                    <ol>
+                                    ·silver-eye <a href="https://en.wikipedia.org/wiki/silver-eye">Click for more info about silver-eye</a>
+                                    </ol>
+                                    <ol>
+                                    ·Golden snub-nosed monkey <a href="https://en.wikipedia.org/wiki/Golden snub-nosed monkey">Click for more info about Golden snub-nosed monkey</a>
+                                    </ol>
+                                    <ol>
+                                    ·Sea squirt Ciona intestinalis <a href="https://en.wikipedia.org/wiki/Sea squirt Ciona intestinalis">Click for more info about Sea squirt Ciona intestinalis</a>
+                                    </ol>
+                                    <ol>
+                                    ·pig <a href="https://en.wikipedia.org/wiki/pig">Click for more info about pig</a>
+                                    </ol>
+                                    <ol>
+                                    ·American pika <a href="https://en.wikipedia.org/wiki/American pika">Click for more info about American pika</a>
+                                    </ol>
+                                    <ol>
+                                    ·Hoffmann's two-fingered sloth <a href="https://en.wikipedia.org/wiki/Hoffmann's two-fingered sloth">Click for more info about Hoffmann's two-fingered sloth</a>
+                                    </ol>
+                                    <ol>
+                                    ·Indian medaka <a href="https://en.wikipedia.org/wiki/Indian medaka">Click for more info about Indian medaka</a>
+                                    </ol>
+                                    <ol>
+                                    ·red-bellied piranha <a href="https://en.wikipedia.org/wiki/red-bellied piranha">Click for more info about red-bellied piranha</a>
+                                    </ol>
+                                    <ol>
+                                    ·Arabian camel <a href="https://en.wikipedia.org/wiki/Arabian camel">Click for more info about Arabian camel</a>
+                                    </ol>
+                                    <ol>
+                                    ·donkey <a href="https://en.wikipedia.org/wiki/donkey">Click for more info about donkey</a>
+                                    </ol>
+                                    <ol>
+                                    ·Asian bonytongue <a href="https://en.wikipedia.org/wiki/Asian bonytongue">Click for more info about Asian bonytongue</a>
+                                    </ol>
+                                    <ol>
+                                    ·hybrid cattle <a href="https://en.wikipedia.org/wiki/hybrid cattle">Click for more info about hybrid cattle</a>
+                                    </ol>
+                                    <ol>
+                                    ·Chinook salmon <a href="https://en.wikipedia.org/wiki/Chinook salmon">Click for more info about Chinook salmon</a>
+                                    </ol>
+                                    <ol>
+                                    ·channel catfish <a href="https://en.wikipedia.org/wiki/channel catfish">Click for more info about channel catfish</a>
+                                    </ol>
+                                    <ol>
+                                    ·domestic cat <a href="https://en.wikipedia.org/wiki/domestic cat">Click for more info about domestic cat</a>
+                                    </ol><a href="/">Main page</a>
+                                        </body>
+                                        </html>
 ----> karyotype endpoint
 *TEST 1----------
 *Input:
@@ -313,7 +1187,7 @@ http://localhost:8080/chromosomeLength?specie=0&chromosome=0
 http://localhost:8080/geneSeq?gene=FRAT1
 *output:
 
-  <!DOCTYPE html>
+      <!DOCTYPE html>
                     <html lang="en">
                     <head>
                         <meta charset="UTF-8">
@@ -321,7 +1195,8 @@ http://localhost:8080/geneSeq?gene=FRAT1
                     </head>
                     <body style="background-color: rgb(64,224,208);"><p> The sequence of the human  gene
                     <b>FRAT1</b>(ENSG00000165879 in ensembl) is:</p>
-                    <textarea readdonly rows = "20" cols = "60">CGGCTCCCGCGGCTGCAGGCGCGCGGCTAGAGTGCCTGGCGGGCTCCGGCTTCCGCGTCCGCCCCGGCCCCGGTCCAGACTTAGTCTTCAGCTCCGCGCCCGCTCCGCCGCGGCCCACCGCGCCCGCCGGCAGCCGAGCCCCCAGCGACGCCCGCACAGCTCCGGGTGCCCAGACAGGGGGCCATGCCGTGCCGGAGGGAGGAGGAAGAGGAAGCCGGCGAGGAGGCGGAGGGGGAGGAAGAGGAGGAGGACAGCTTCCTCCTACTGCAGCAGTCAGTGGCGCTGGGCAGCTCGGGCGAGGTGGACCGGCTGGTGGCCCAGATCGGCGAGACGCTGCAGCTGGACGCGGCGCAGCACAGCCCGGCCTCGCCGTGCGGGCCCCCGGGGGCGCCGCTGCGGGCCCCGGGGCCCCTGGCTGCGGCGGTGCCGGCGGACAAGGCCAGGTCCCCGGCGGTGCCGCTGCTGCTGCCGCCCGCGTTGGCGGAGACTGTGGGCCCGGCGCCCCCTGGGGTCCTGCGCTGCGCCCTGGGGGACCGCGGCCGCGTGCGGGGCCGCGCTGCGCCCTACTGCGTGGCCGAGCTCGCCACAGGCCCCAGCGCGCTGTCCCCACTGCCCCCTCAGGCCGACCTTGATGGGCCTCCGGGAGCTGGCAAGCAGGGCATCCCGCAGCCGCTGTCGGGTCCGTGCCGGCGAGGATGGCTCCGGGGCGCCGCCGCCTCCCGCCGCCTGCAGCAGCGACGCGGGTCCCAACCAGAAACCCGCACAGGCGACGACGACCCGCACCGGCTTCTGCAGCAGCTAGTGCTCTCTGGAAACCTCATCAAGGAGGCCGTGCGAAGGCTTCATTCGCGACGGCTGCAGTTACGTGCAAAGCTTCCCCAACGCCCGCTCCTGGGACCTCTGTCGGCCCCGGTGCATGAACCCCCTTCGCCTCGCAGCCCTCGCGCGGCCTGCAGTGACCCTGGCGCCTCCGGGAGGGCGCAGCTCAGAACTGGCGACGGCGTTCTTGTGCCTGGCAGCTAACACGCCCGGGGTGGCCACAGCGCCAGCCTCAGACTGGAGGGCAAGGGGTTCCCTTGAGGGCTGCAGTTCTACTCAGGCTGGTGGAGAACTCTGGCTTTTGGAAGCGAGAGTAAAAAGCTAATGACGAGGAACCGAAAAATCGCGAGTGTTTCGCGGGTAACTGGGGTTGAGGGCCAAAATATTTGGAATGAAGGACTTTGGCCCTATTTAAGGCAGATTTTACAGAGCGCACCTCAAACGTACAAGTCAGTAGGACTCCTTATTTGGCGTGACCCGACCTGGCCGCGGAGCCTGCATTTCCTCGCAGCCTCTCAGTGCCCTCCAGCCCCGCGACCATGTGGCCACAATCCACGCTTCTCCGGATCGCGGTGCGCCGGAACCACGGAGGATGATGCCAGTTACTTGCTTTACCTTTTCAGGGCTGGCTCCTGATCCACTTTGGGGGAGGAGAACATGAGTAGATAATTTCAGGGTGCAGCCCAATCTGCCAGACTTAAAAAAACCATCTTGTGTCTTTGGAGGTGCTGCTTAATACCAAACATGCGGTGCCATGAAGGGACCCTTTGGGGGTTGAATAGGAGTTAACCCCTGCGCTCTCTTTGCAACTGTCTCTCTTCTCAGAGTGGTGGGGGAAGGCTGTACGACACGGGTGGGGAAAGGAGGTGGGGGCGGGGAGTATTGAATGGTGGTGGAAGGGTAGAGAGGCGCGGAGTGAACCCCACGCCCTGTCTAAAGTGTATTTTCAGAGCCGGCCCGCCTCTCCTCGGTTCAAGGTCACTGTTTCCTGGGCACGCACTGGGTTGCGGGACAGAGTAGCCAGGTTCTGCCGGTGCTCGGAGAAGAGCGCAGTGTTTTGCAAGTGCTGGAGTCTCCTGAGGACACGCGCGTCGCCGCCACCGCGGGTGTGGGAAAGCGCGGACGTGCTGGGCGGCTGTGCTTCGGTAGGCGACCACCGCCCCTGGCCGCGCTCCGGGCTTTCACGGAAACTCCCGAGACCGGGCCCTGGGTTCCTCCTCTCCTACTCGGCTCTGCAGTCCTACTCAAGCGGGTGGCTCTGGGATCCTGGGGGCCTGGGTTGGGGGCTAGGGAGACGCCATGTGATGGACACTCCAGGGACACACAGCCTAGCACAGCAGCTTATAATGGGCTCTCCGGGGCCATTTGCAATAACAGCTGCAATTCCCTGGATAGACGAGTTGATTTCCTCCCTCTGCCCCTCCCCCAGCCATGCCAGCTGGCCTTTGTAAGTGCAGGAAACCGAGTAGAAAATGTGACCCTCCAAATGGAGAAGCTGCAGGCTTTGCCATTGTGAACCATGGTGAAGTGCTTGGAACATACTGTTCACTCACTCTAAAGGCGCTGAGACTGTGCTGTTGTTCTCGTTTTTATAGTCAATGGCTTGTTCATCATCCAGATGTGGCTACTGACATATCTACACTTCGCACCGGAGTGTCTGGAATTGTGGCTATCCTGATTATAGGATTTTAACTTAACTGAAATGCCTGCTTTGAATAAATGTGTTGGGTTTTTTGTTTGGTTTTATTTTATACTTGCCATCAGTGAAAAAGATGTACAGAACACATTTCTCTGATCTCCATAAACATGAAAACACTTGAAATCTC</textarea><br>
+                    <textarea readdonly rows = "20" cols = "60">CGGCTCCCGCGGCTGCAGGCGCGCGGCTAGAGTGCCTGGCGGGCTCCGGCTTCCGCGTCCGCCCCGGCCCCGGTCCAGACTTAGTCTTCAGCTCCGCGCCCGCTCCGCCGCGGCCCACCGCGCCCGCCGGCAGCCGAGCCCCCAGCGACGCCCGCACAGCTCCGGGTGCCCAGACAGGGGGCCATGCCGTGCCGGAGGGAGGAGGAAGAGGAAGCCGGCGAGGAGGCGGAGGGGGAGGAAGAGGAGGAGGACAGCTTCCTCCTACTGCAGCAGTCAGTGGCGCTGGGCAGCTCGGGCGAGGTGGACCGGCTGGTGGCCCAGATCGGCGAGACGCTGCAGCTGGACGCGGCGCAGCACAGCCCGGCCTCGCCGTGCGGGCCCCCGGGGGCGCCGCTGCGGGCCCCGGGGCCCCTGGCTGCGGCGGTGCCGGCGGACAAGGCCAGGTCCCCGGCGGTGCCGCTGCTGCTGCCGCCCGCGTTGGCGGAGACTGTGGGCCCGGCGCCCCCTGGGGTCCTGCGCTGCGCCCTGGGGGACCGCGGCCGCGTGCGGGGCCGCGCTGCGCCCTACTGCGTGGCCGAGCTCGCCACAGGCCCCAGCGCGCTGTCCCCACTGCCCCCTCAGGCCGACCTTGATGGGCCTCCGGGAGCTGGCAAGCAGGGCATCCCGCAGCCGCTGTCGGGTCCGTGCCGGCGAGGATGGCTCCGGGGCGCCGCCGCCTCCCGCCGCCTGCAGCAGCGACGCGGGTCCCAACCAGAAACCCGCACAGGCGACGACGACCCGCACCGGCTTCTGCAGCAGCTAGTGCTCTCTGGAAACCTCATCAAGGAGGCCGTGCGAAGGCTTCATTCGCGACGGCTGCAGTTACGTGCAAAGCTTCCCCAACGCCCGCTCCTGGGACCTCTGTCGGCCCCGGTGCATGAACCCCCTTCGCCTCGCAGCCCTCGCGCGGCCTGCAGTGACCCTGGCGCCTCCGGGAGGGCGCAGCTCAGAACTGGCGACGGCGTTCTTGTGCCTGGCAGCTAACACGCCCGGGGTGGCCACAGCGCCAGCCTCAGACTGGAGGGCAAGGGGTTCCCTTGAGGGCTGCAGTTCTACTCAGGCTGGTGGAGAACTCTGGCTTTTGGAAGCGAGAGTAAAAAGCTAATGACGAGGAACCGAAAAATCGCGAGTGTTTCGCGGGTAACTGGGGTTGAGGGCCAAAATATTTGGAATGAAGGACTTTGGCCCTATTTAAGGCAGATTTTACAGAGCGCACCTCAAACGTACAAGTCAGTAGGACTCCTTATTTGGCGTGACCCGACCTGGCCGCGGAGCCTGCATTTCCTCGCAGCCTCTCAGTGCCCTCCAGCCCCGCGACCATGTGGCCACAATCCACGCTTCTCCGGATCGCGGTGCGCCGGAACCACGGAGGATGATGCCAGTTACTTGCTTTACCTTTTCAGGGCTGGCTCCTGATCCACTTTGGGGGAGGAGAACATGAGTAGATAATTTCAGGGTGCAGCCCAATCTGCCAGACTTAAAAAAACCATCTTGTGTCTTTGGAGGTGCTGCTTAATACCAAACATGCGGTGCCATGAAGGGACCCTTTGGGGGTTGAATAGGAGTTAACCCCTGCGCTCTCTTTGCAACTGTCTCTCTTCTCAGAGTGGTGGGGGAAGGCTGTACGACACGGGTGGGGAAAGGAGGTGGGGGCGGGGAGTATTGAATGGTGGTGGAAGGGTAGAGAGGCGCGGAGTGAACCCCACGCCCTGTCTAAAGTGTATTTTCAGAGCCGGCCCGCCTCTCCTCGGTTCAAGGTCACTGTTTCCTGGGCACGCACTGGGTTGCGGGACAGAGTAGCCAGGTTCTGCCGGTGCTCGGAGAAGAGCGCAGTGTTTTGCAAGTGCTGGAGTCTCCTGAGGACACGCGCGTCGCCGCCACCGCGGGTGTGGGAAAGCGCGGACGTGCTGGGCGGCTGTGCTTCGGTAGGCGACCACCGCCCCTGGCCGCGCTCCGGGCTTTCACGGAAACTCCCGAGACCGGGCCCTGGGTTCCTCCTCTCCTACTCGGCTCTGCAGTCCTACTCAAGCGGGTGGCTCTGGGATCCTGGGGGCCTGGGTTGGGGGCTAGGGAGACGCCATGTGATGGACACTCCAGGGACACACAGCCTAGCACAGCAGCTTATAATGGGCTCTCCGGGGCCATTTGCAATAACAGCTGCAATTCCCTGGATAGACGAGTTGATTTCCTCCCTCTGCCCCTCCCCCAGCCATGCCAGCTGGCCTTTGTAAGTGCAGGAAACCGAGTAGAAAATGTGACCCTCCAAATGGAGAAGCTGCAGGCTTTGCCATTGTGAACCATGGTGAAGTGCTTGGAACATACTGTTCACTCACTCTAAAGGCGCTGAGACTGTGCTGTTGTTCTCGTTTTTATAGTCAATGGCTTGTTCATCATCCAGATGTGGCTACTGACATATCTACACTTCGCACCGGAGTGTCTGGAATTGTGGCTATCCTGATTATAGGATTTTAACTTAACTGAAATGCCTGCTTTGAATAAATGTGTTGGGTTTTTTGTTTGGTTTTATTTTATACTTGCCATCAGTGAAAAAGATGTACAGAACACATTTCTCTGATCTCCATAAACATGAAAACACTTGAAATCTC</textarea>
+                    <br><a href="https://en.wikipedia.org/wiki/FRAT1">Click for more info about FRAT1</a>
                     <a href="/">Main page</a>
                     </body>
                     </html>

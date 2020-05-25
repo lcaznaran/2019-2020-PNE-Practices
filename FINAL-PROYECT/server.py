@@ -42,7 +42,6 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         path = req_line[1]
         arguments = path.split('?') #we can see "?" in the examples given
         verb = arguments[0]
-        status = 404
         try:
             if verb == "/":
                 contents = Path("index.html").read_text()
@@ -73,7 +72,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     </head>
                     <body style="background-color: rgb(64,224,208);">"""
                     pair = arguments[1]
-                    name, values = pair.split("=")
+                    names,values = pair.split("=")
                     if values != "":
                         limit = int(values)
                         if len(info) >= limit:
@@ -86,10 +85,10 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                </html>"""
                             for i in info:
                                 lim_list.append(i["common_name"])
-                                if limit == len(lim_list):
+                                if limit == len(lim_list): #if not, it will print all species
                                     for e in lim_list:
                                         contents += f"""<ol>
-                                        ·{e}
+                                        ·{e} <a href="https://en.wikipedia.org/wiki/{e}">Click for more info about {e}</a>
                                         </ol>"""
                             contents += """<a href="/">Main page</a>
                                         </body>
@@ -105,7 +104,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         for i in info:
                             contents += f"""
                                     <ol>
-                                    ·{i["common_name"]}
+                                    ·{i["common_name"]} <a href="https://en.wikipedia.org/wiki/{i["common_name"]}">Click for more info about {i["common_name"]}</a>
                                     </ol>"""
                         contents += """<a href="/">Main page</a>
                                         </body>
@@ -270,7 +269,8 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     contents += f"""<p> The sequence of the human  gene 
                     <b>{specie_n}</b>({gene} in ensembl) is:</p> 
                     <textarea readdonly rows = "20" cols = "60">{sequence}</textarea>"""
-                    contents += f"""<br>
+                    contents += f"""
+                    <br><a href="https://en.wikipedia.org/wiki/{specie_n}">Click for more info about {specie_n}</a>
                     <a href="/">Main page</a> 
                     </body>
                     </html>"""
